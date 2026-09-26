@@ -7,7 +7,7 @@ import pandas as pd
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
 
-from src.config import (
+from src.config_batch import (
     JSON_OUTPUT,
 )
 
@@ -263,7 +263,7 @@ def calculate_baseline_metrics():
     # Save results
 
     output_directory = Path(
-        "experiments/baseline_results"
+        "experiments/baseline_batch_results"
     )
 
     output_directory.mkdir(
