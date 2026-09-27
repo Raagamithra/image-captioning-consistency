@@ -1,0 +1,105 @@
+{
+    "image_id": "test_012",
+    "csr": {
+        "image_id": "test_012",
+        "entities": [
+            {
+                "id": "e1",
+                "type": "cigarette",
+                "attributes": []
+            },
+            {
+                "id": "e2",
+                "type": "hat",
+                "attributes": [
+                    "wide_brimmed"
+                ]
+            },
+            {
+                "id": "e3",
+                "type": "photo",
+                "attributes": [
+                    "black_and_white"
+                ]
+            },
+            {
+                "id": "e4",
+                "type": "tie",
+                "attributes": []
+            },
+            {
+                "id": "e5",
+                "type": "top",
+                "attributes": [
+                    "striped"
+                ]
+            },
+            {
+                "id": "e6",
+                "type": "woman",
+                "attributes": [
+                    "smiling"
+                ]
+            }
+        ],
+        "actions": [
+            {
+                "subject": "e6",
+                "action": "hold",
+                "object": "e1"
+            },
+            {
+                "subject": "e6",
+                "action": "smile",
+                "object": null
+            },
+            {
+                "subject": "e6",
+                "action": "wear",
+                "object": "e2"
+            },
+            {
+                "subject": "e6",
+                "action": "wear",
+                "object": "e4"
+            },
+            {
+                "subject": "e6",
+                "action": "wear",
+                "object": "e5"
+            }
+        ],
+        "relations": [
+            {
+                "subject": "e1",
+                "relation": "near",
+                "object": "e6"
+            },
+            {
+                "subject": "e3",
+                "relation": "shows",
+                "object": "e6"
+            }
+        ],
+        "scene": {
+            "location": null,
+            "environment": [
+                "black_and_white_photo"
+            ]
+        }
+    },
+    "provenance": {
+        "consensus_policy": {
+            "number_of_runs": 1,
+            "minimum_support": 1,
+            "rule": "strict majority"
+        },
+        "minority_entities": [],
+        "minority_actions": [],
+        "minority_relations": [],
+        "scene": {
+            "location_support": {},
+            "minority_environment": []
+        }
+    }
+}

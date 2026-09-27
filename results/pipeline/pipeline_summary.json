@@ -1,333 +1,205 @@
 {
-    "timestamp": "2026-09-11T16:50:52.856625+00:00",
+    "timestamp": "2026-09-27T13:45:03.923132+00:00",
     "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
     "prompt": "Describe this image in one sentence.",
     "temperature": 0.0,
-    "runs_per_image": 3,
-    "rebuild": false,
-    "images_processed": 5,
-    "successful": 5,
-    "failed": 0,
+    "runs_per_image": 2,
+    "rebuild": true,
+    "images_processed": 26,
+    "successful": 8,
+    "failed": 18,
     "results": [
+        {
+            "image_id": "shared_image_003",
+            "image_file": "shared_image_003.jpg",
+            "status": "failed",
+            "caption": null,
+            "error": "Only 1/2 caption runs succeeded for shared_image_003.jpg.",
+            "used_frozen_consensus": false
+        },
+        {
+            "image_id": "shared_image_004",
+            "image_file": "shared_image_004.jpg",
+            "status": "failed",
+            "caption": null,
+            "error": "Only 1/2 caption runs succeeded for shared_image_004.jpg.",
+            "used_frozen_consensus": false
+        },
+        {
+            "image_id": "shared_image_005",
+            "status": "success",
+            "caption": "In a sunlit classroom, a female teacher sits on the floor with a diverse group of young children, guiding them as they engage with various wooden educational toys and activities.",
+            "selection_method": "first_successful_run"
+        },
         {
             "image_id": "test_001",
             "status": "success",
-            "caption": "A brown dog runs. The brown dog is through a grassy field. The grassy field is dotted with a yellow flower. The environment includes an outdoor.",
-            "csr": {
-                "image_id": "test_001",
-                "entities": [
-                    {
-                        "id": "e1",
-                        "type": "dog",
-                        "attributes": [
-                            "brown"
-                        ]
-                    },
-                    {
-                        "id": "e2",
-                        "type": "field",
-                        "attributes": [
-                            "grassy"
-                        ]
-                    },
-                    {
-                        "id": "e3",
-                        "type": "flower",
-                        "attributes": [
-                            "yellow"
-                        ]
-                    }
-                ],
-                "actions": [
-                    {
-                        "subject": "e1",
-                        "action": "run",
-                        "object": null
-                    }
-                ],
-                "relations": [
-                    {
-                        "subject": "e1",
-                        "relation": "through",
-                        "object": "e2"
-                    },
-                    {
-                        "subject": "e2",
-                        "relation": "dotted_with",
-                        "object": "e3"
-                    }
-                ],
-                "scene": {
-                    "location": null,
-                    "environment": [
-                        "outdoor"
-                    ]
-                }
-            }
+            "caption": "A brown dog runs across a grassy field filled with yellow flowers.",
+            "selection_method": "first_successful_run"
         },
         {
             "image_id": "test_002",
             "status": "success",
-            "caption": "A wooden cabin with a log sits. The wooden cabin with a log is on a calm lake. A mirrored reflection is in the calm lake and of the wooden cabin with a log. The environment includes snow capped mountains.",
-            "csr": {
-                "image_id": "test_002",
-                "entities": [
-                    {
-                        "id": "e2",
-                        "type": "cabin",
-                        "attributes": [
-                            "log",
-                            "wooden"
-                        ]
-                    },
-                    {
-                        "id": "e3",
-                        "type": "lake",
-                        "attributes": [
-                            "calm"
-                        ]
-                    },
-                    {
-                        "id": "e4",
-                        "type": "mountain",
-                        "attributes": [
-                            "majestic",
-                            "snow_capped"
-                        ]
-                    },
-                    {
-                        "id": "e6",
-                        "type": "reflection",
-                        "attributes": [
-                            "mirrored"
-                        ]
-                    }
-                ],
-                "actions": [
-                    {
-                        "subject": "e2",
-                        "action": "sit",
-                        "object": null
-                    }
-                ],
-                "relations": [
-                    {
-                        "subject": "e2",
-                        "relation": "on",
-                        "object": "e3"
-                    },
-                    {
-                        "subject": "e6",
-                        "relation": "in",
-                        "object": "e3"
-                    },
-                    {
-                        "subject": "e6",
-                        "relation": "of",
-                        "object": "e2"
-                    }
-                ],
-                "scene": {
-                    "location": null,
-                    "environment": [
-                        "snow_capped_mountains"
-                    ]
-                }
-            }
+            "caption": "A serene log cabin sits on a calm lake, its reflection perfectly mirrored in the water with majestic, snow-capped mountains rising in the background under a soft, golden sky.",
+            "selection_method": "first_successful_run"
         },
         {
             "image_id": "test_003",
             "status": "success",
-            "caption": "A man sits and types a laptop. The man is at a desk and under a desk lamp.",
-            "csr": {
-                "image_id": "test_003",
-                "entities": [
-                    {
-                        "id": "e1",
-                        "type": "desk",
-                        "attributes": []
-                    },
-                    {
-                        "id": "e2",
-                        "type": "desk_lamp",
-                        "attributes": []
-                    },
-                    {
-                        "id": "e4",
-                        "type": "laptop",
-                        "attributes": []
-                    },
-                    {
-                        "id": "e5",
-                        "type": "man",
-                        "attributes": []
-                    }
-                ],
-                "actions": [
-                    {
-                        "subject": "e5",
-                        "action": "sit",
-                        "object": null
-                    },
-                    {
-                        "subject": "e5",
-                        "action": "type",
-                        "object": "e4"
-                    }
-                ],
-                "relations": [
-                    {
-                        "subject": "e5",
-                        "relation": "at",
-                        "object": "e1"
-                    },
-                    {
-                        "subject": "e5",
-                        "relation": "under",
-                        "object": "e2"
-                    }
-                ],
-                "scene": {
-                    "location": null,
-                    "environment": []
-                }
-            }
+            "caption": "A small red vintage car is parked on a street next to a curb, with a beige stone building featuring barred windows in the background.",
+            "selection_method": "first_successful_run"
         },
         {
             "image_id": "test_004",
             "status": "success",
-            "caption": "A woman with blue jeans and a brown tank top walks a white dog. The white dog is on a red leash. The woman with blue jeans and a brown tank top is through a grassy park.",
-            "csr": {
-                "image_id": "test_004",
-                "entities": [
-                    {
-                        "id": "e1",
-                        "type": "dog",
-                        "attributes": [
-                            "white"
-                        ]
-                    },
-                    {
-                        "id": "e4",
-                        "type": "leash",
-                        "attributes": [
-                            "red"
-                        ]
-                    },
-                    {
-                        "id": "e6",
-                        "type": "park",
-                        "attributes": [
-                            "grassy"
-                        ]
-                    },
-                    {
-                        "id": "e9",
-                        "type": "woman",
-                        "attributes": [
-                            "blue_jeans",
-                            "brown_tank_top"
-                        ]
-                    }
-                ],
-                "actions": [
-                    {
-                        "subject": "e9",
-                        "action": "walk",
-                        "object": "e1"
-                    }
-                ],
-                "relations": [
-                    {
-                        "subject": "e1",
-                        "relation": "on",
-                        "object": "e4"
-                    },
-                    {
-                        "subject": "e9",
-                        "relation": "through",
-                        "object": "e6"
-                    }
-                ],
-                "scene": {
-                    "location": null,
-                    "environment": []
-                }
-            }
+            "caption": "A white mug sits on a wooden table in a softly lit, blurred background.",
+            "selection_method": "first_successful_run"
         },
         {
             "image_id": "test_005",
             "status": "success",
-            "caption": "A teacher with a female sits. A young group with a diverse is in a classroom with a bright. The teacher with a female is in the classroom with a bright and on a floor. The scene is set in a classroom.",
-            "csr": {
-                "image_id": "test_005",
-                "entities": [
-                    {
-                        "id": "e2",
-                        "type": "classroom",
-                        "attributes": [
-                            "bright"
-                        ]
-                    },
-                    {
-                        "id": "e3",
-                        "type": "floor",
-                        "attributes": []
-                    },
-                    {
-                        "id": "e4",
-                        "type": "group",
-                        "attributes": [
-                            "diverse",
-                            "young"
-                        ]
-                    },
-                    {
-                        "id": "e7",
-                        "type": "teacher",
-                        "attributes": [
-                            "female"
-                        ]
-                    },
-                    {
-                        "id": "e8",
-                        "type": "toy",
-                        "attributes": [
-                            "wooden"
-                        ]
-                    }
-                ],
-                "actions": [
-                    {
-                        "subject": "e7",
-                        "action": "sit",
-                        "object": null
-                    }
-                ],
-                "relations": [
-                    {
-                        "subject": "e4",
-                        "relation": "in",
-                        "object": "e2"
-                    },
-                    {
-                        "subject": "e7",
-                        "relation": "in",
-                        "object": "e2"
-                    },
-                    {
-                        "subject": "e7",
-                        "relation": "on",
-                        "object": "e3"
-                    }
-                ],
-                "scene": {
-                    "location": "classroom",
-                    "environment": [
-                        "bright"
-                    ]
-                }
-            }
+            "caption": "A lush green mountain ridge rises under a vast blue sky filled with wispy white clouds.",
+            "selection_method": "first_successful_run"
+        },
+        {
+            "image_id": "test_006",
+            "status": "success",
+            "caption": "A tabby cat with a white chest sits on a windowsill looking out the window.",
+            "selection_method": "first_successful_run"
+        },
+        {
+            "image_id": "test_007",
+            "status": "success",
+            "caption": "A green bicycle leans against a brick wall covered in ivy, casting a long shadow in the warm sunlight.",
+            "selection_method": "first_successful_run"
+        },
+        {
+            "image_id": "test_008",
+            "image_file": "test_008.jpg",
+            "status": "failed",
+            "caption": null,
+            "error": "Only 1/2 caption runs succeeded for test_008.jpg.",
+            "used_frozen_consensus": false
+        },
+        {
+            "image_id": "test_009",
+            "image_file": "test_009.jpg",
+            "status": "failed",
+            "caption": null,
+            "error": "Only 0/2 caption runs succeeded for test_009.jpg.",
+            "used_frozen_consensus": false
+        },
+        {
+            "image_id": "test_010",
+            "image_file": "test_010.jpg",
+            "status": "failed",
+            "caption": null,
+            "error": "Only 0/2 caption runs succeeded for test_010.jpg.",
+            "used_frozen_consensus": false
+        },
+        {
+            "image_id": "test_011",
+            "image_file": "test_011.jpg",
+            "status": "failed",
+            "caption": null,
+            "error": "Only 0/2 caption runs succeeded for test_011.jpg.",
+            "used_frozen_consensus": false
+        },
+        {
+            "image_id": "test_012",
+            "image_file": "test_012.jpg",
+            "status": "failed",
+            "caption": null,
+            "error": "Only 0/2 caption runs succeeded for test_012.jpg.",
+            "used_frozen_consensus": false
+        },
+        {
+            "image_id": "test_013",
+            "image_file": "test_013.jpg",
+            "status": "failed",
+            "caption": null,
+            "error": "Only 0/2 caption runs succeeded for test_013.jpg.",
+            "used_frozen_consensus": false
+        },
+        {
+            "image_id": "test_014",
+            "image_file": "test_014.jpg",
+            "status": "failed",
+            "caption": null,
+            "error": "Only 0/2 caption runs succeeded for test_014.jpg.",
+            "used_frozen_consensus": false
+        },
+        {
+            "image_id": "test_015",
+            "image_file": "test_015.jpg",
+            "status": "failed",
+            "caption": null,
+            "error": "Only 0/2 caption runs succeeded for test_015.jpg.",
+            "used_frozen_consensus": false
+        },
+        {
+            "image_id": "test_016",
+            "image_file": "test_016.jpg",
+            "status": "failed",
+            "caption": null,
+            "error": "Only 0/2 caption runs succeeded for test_016.jpg.",
+            "used_frozen_consensus": false
+        },
+        {
+            "image_id": "test_017",
+            "image_file": "test_017.jpg",
+            "status": "failed",
+            "caption": null,
+            "error": "Only 0/2 caption runs succeeded for test_017.jpg.",
+            "used_frozen_consensus": false
+        },
+        {
+            "image_id": "test_018",
+            "image_file": "test_018.jpg",
+            "status": "failed",
+            "caption": null,
+            "error": "Only 0/2 caption runs succeeded for test_018.jpg.",
+            "used_frozen_consensus": false
+        },
+        {
+            "image_id": "test_019",
+            "image_file": "test_019.jpg",
+            "status": "failed",
+            "caption": null,
+            "error": "Only 0/2 caption runs succeeded for test_019.jpg.",
+            "used_frozen_consensus": false
+        },
+        {
+            "image_id": "test_020",
+            "image_file": "test_020.jpg",
+            "status": "failed",
+            "caption": null,
+            "error": "Only 0/2 caption runs succeeded for test_020.jpg.",
+            "used_frozen_consensus": false
+        },
+        {
+            "image_id": "test_021",
+            "image_file": "test_021.jpg",
+            "status": "failed",
+            "caption": null,
+            "error": "Only 0/2 caption runs succeeded for test_021.jpg.",
+            "used_frozen_consensus": false
+        },
+        {
+            "image_id": "test_022",
+            "image_file": "test_022.jpg",
+            "status": "failed",
+            "caption": null,
+            "error": "Only 0/2 caption runs succeeded for test_022.jpg.",
+            "used_frozen_consensus": false
+        },
+        {
+            "image_id": "test_023",
+            "image_file": "test_023.jpg",
+            "status": "failed",
+            "caption": null,
+            "error": "Only 0/2 caption runs succeeded for test_023.jpg.",
+            "used_frozen_consensus": false
         }
     ]
 }

@@ -1,0 +1,86 @@
+[
+    {
+        "image_id": "test_013",
+        "csr": {
+            "image_id": "test_013",
+            "entities": [
+                {
+                    "id": "e1",
+                    "type": "asparagus",
+                    "attributes": [
+                        "fresh"
+                    ]
+                },
+                {
+                    "id": "e2",
+                    "type": "broccoli",
+                    "attributes": [
+                        "fresh"
+                    ]
+                },
+                {
+                    "id": "e3",
+                    "type": "carrots",
+                    "attributes": [
+                        "fresh"
+                    ]
+                },
+                {
+                    "id": "e4",
+                    "type": "cucumbers",
+                    "attributes": [
+                        "fresh"
+                    ]
+                },
+                {
+                    "id": "e5",
+                    "type": "peas",
+                    "attributes": [
+                        "fresh"
+                    ]
+                },
+                {
+                    "id": "e6",
+                    "type": "radishes",
+                    "attributes": [
+                        "fresh"
+                    ]
+                },
+                {
+                    "id": "e7",
+                    "type": "red_potatoes",
+                    "attributes": [
+                        "fresh"
+                    ]
+                },
+                {
+                    "id": "e8",
+                    "type": "strawberries",
+                    "attributes": [
+                        "fresh"
+                    ]
+                }
+            ],
+            "actions": [],
+            "relations": [],
+            "scene": {
+                "location": null,
+                "environment": []
+            }
+        },
+        "provenance": {
+            "consensus_policy": {
+                "number_of_runs": 1,
+                "minimum_support": 1,
+                "rule": "strict majority"
+            },
+            "minority_entities": [],
+            "minority_actions": [],
+            "minority_relations": [],
+            "scene": {
+                "location_support": {},
+                "minority_environment": []
+            }
+        }
+    }
+]

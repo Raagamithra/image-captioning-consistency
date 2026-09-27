@@ -1,0 +1,74 @@
+[
+    {
+        "image_id": "test_014",
+        "status": "success",
+        "caption": "A child with a two flies a colorful kite. A statue with a bronze stands. The statue with a bronze is in front of a glass windowed building with a tall and on a pedestal.",
+        "csr": {
+            "image_id": "test_014",
+            "entities": [
+                {
+                    "id": "e1",
+                    "type": "building",
+                    "attributes": [
+                        "glass_windowed",
+                        "tall"
+                    ]
+                },
+                {
+                    "id": "e2",
+                    "type": "child",
+                    "attributes": [
+                        "two"
+                    ]
+                },
+                {
+                    "id": "e3",
+                    "type": "kite",
+                    "attributes": [
+                        "colorful"
+                    ]
+                },
+                {
+                    "id": "e4",
+                    "type": "pedestal",
+                    "attributes": []
+                },
+                {
+                    "id": "e5",
+                    "type": "statue",
+                    "attributes": [
+                        "bronze"
+                    ]
+                }
+            ],
+            "actions": [
+                {
+                    "subject": "e2",
+                    "action": "fly",
+                    "object": "e3"
+                },
+                {
+                    "subject": "e5",
+                    "action": "stand",
+                    "object": null
+                }
+            ],
+            "relations": [
+                {
+                    "subject": "e5",
+                    "relation": "in_front_of",
+                    "object": "e1"
+                },
+                {
+                    "subject": "e5",
+                    "relation": "on",
+                    "object": "e4"
+                }
+            ],
+            "scene": {
+                "location": null,
+                "environment": []
+            }
+        }
+    }
+]

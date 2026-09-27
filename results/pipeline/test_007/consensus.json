@@ -1,0 +1,102 @@
+[
+    {
+        "image_id": "test_007",
+        "csr": {
+            "image_id": "test_007",
+            "entities": [
+                {
+                    "id": "e1",
+                    "type": "bicycle",
+                    "attributes": [
+                        "green"
+                    ]
+                },
+                {
+                    "id": "e5",
+                    "type": "wall",
+                    "attributes": [
+                        "brick"
+                    ]
+                }
+            ],
+            "actions": [
+                {
+                    "subject": "e1",
+                    "action": "lean",
+                    "object": null
+                }
+            ],
+            "relations": [
+                {
+                    "subject": "e1",
+                    "relation": "against",
+                    "object": "e5"
+                }
+            ],
+            "scene": {
+                "location": null,
+                "environment": []
+            }
+        },
+        "provenance": {
+            "consensus_policy": {
+                "number_of_runs": 2,
+                "minimum_support": 2,
+                "rule": "strict majority"
+            },
+            "minority_entities": [
+                {
+                    "consensus_id": "e2",
+                    "support": 1,
+                    "runs": [
+                        1
+                    ],
+                    "type_variants": [
+                        "ivy"
+                    ],
+                    "attribute_support": {}
+                },
+                {
+                    "consensus_id": "e3",
+                    "support": 1,
+                    "runs": [
+                        0
+                    ],
+                    "type_variants": [
+                        "shadow"
+                    ],
+                    "attribute_support": {
+                        "long": 1
+                    }
+                },
+                {
+                    "consensus_id": "e4",
+                    "support": 1,
+                    "runs": [
+                        1
+                    ],
+                    "type_variants": [
+                        "side"
+                    ],
+                    "attribute_support": {
+                        "left": 1
+                    }
+                }
+            ],
+            "minority_actions": [],
+            "minority_relations": [],
+            "scene": {
+                "location_support": {},
+                "minority_environment": [
+                    {
+                        "value": "warm_sunlight",
+                        "support": 1,
+                        "runs": [
+                            0
+                        ]
+                    }
+                ]
+            }
+        }
+    }
+]

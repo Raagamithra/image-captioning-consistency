@@ -1,10 +1,10 @@
 [
     {
         "image_id": "test_003",
-        "image_file": "test_003.jpg",
+        "image_file": "test_003.jpeg",
         "baseline_run_number": 1,
         "extraction_run_number": 1,
-        "caption": "A man wearing glasses and a white shirt sits at a desk, typing on a laptop while illuminated by a warm desk lamp in a dimly lit room.",
+        "caption": "A small red vintage car is parked on a street next to a curb, with a beige stone building featuring barred windows in the background.",
         "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
         "temperature": 0.0,
         "status": "success",
@@ -12,24 +12,13 @@
     },
     {
         "image_id": "test_003",
-        "image_file": "test_003.jpg",
+        "image_file": "test_003.jpeg",
         "baseline_run_number": 2,
         "extraction_run_number": 2,
-        "caption": "A bearded man wearing glasses sits at a desk, typing on a laptop under the warm light of a desk lamp.",
+        "caption": "A bright red vintage compact car is parked on the street in front of a beige stone building featuring two barred windows.",
         "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
         "temperature": 0.0,
         "status": "success",
-        "attempts": 1
-    },
-    {
-        "image_id": "test_003",
-        "image_file": "test_003.jpg",
-        "baseline_run_number": 3,
-        "extraction_run_number": 3,
-        "caption": "A man with glasses and a beard, wearing a white shirt, sits at a desk typing on a laptop under the warm glow of a desk lamp.",
-        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
-        "temperature": 0.0,
-        "status": "success",
-        "attempts": 1
+        "attempts": 2
     }
 ]

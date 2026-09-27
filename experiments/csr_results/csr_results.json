@@ -320,5 +320,47 @@
         "output": "A batter in a red jersey stands ready at home plate with his bat raised, as the catcher crouches behind him and the umpire watches from the side.",
         "status": "success",
         "error": null
+    },
+    {
+        "image_id": "shared_image_003",
+        "image_file": "shared_image_003.jpg",
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+        "prompt": "Describe this image in one sentence.",
+        "temperature": 0.0,
+        "run_number": 1,
+        "attempts": 2,
+        "timestamp_utc": "2026-09-26T17:13:06.619473+00:00",
+        "generation_time_seconds": 16.342,
+        "output": "A man with glasses and a beard, wearing a white shirt, is typing on a laptop at a desk illuminated by a desk lamp.",
+        "status": "success",
+        "error": null
+    },
+    {
+        "image_id": "shared_image_004",
+        "image_file": "shared_image_004.jpg",
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+        "prompt": "Describe this image in one sentence.",
+        "temperature": 0.0,
+        "run_number": 1,
+        "attempts": 1,
+        "timestamp_utc": "2026-09-26T17:13:34.668616+00:00",
+        "generation_time_seconds": 11.858,
+        "output": "A woman wearing a brown tank top and blue jeans walks a white dog on a red leash across a grassy lawn in a park.",
+        "status": "success",
+        "error": null
+    },
+    {
+        "image_id": "shared_image_005",
+        "image_file": "shared_image_005.jpg",
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+        "prompt": "Describe this image in one sentence.",
+        "temperature": 0.0,
+        "run_number": 1,
+        "attempts": 2,
+        "timestamp_utc": "2026-09-26T17:15:02.874410+00:00",
+        "generation_time_seconds": 70.344,
+        "output": "A teacher sits on the floor with a group of young children, guiding them as they play with wooden educational toys in a bright classroom.",
+        "status": "success",
+        "error": null
     }
 ]

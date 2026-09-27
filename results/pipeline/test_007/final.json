@@ -1,0 +1,8 @@
+[
+    {
+        "image_id": "test_007",
+        "status": "success",
+        "caption": "A green bicycle leans against a brick wall covered in ivy, casting a long shadow in the warm sunlight.",
+        "selection_method": "first_successful_run"
+    }
+]

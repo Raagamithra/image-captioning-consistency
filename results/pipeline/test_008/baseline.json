@@ -1,0 +1,13 @@
+[
+    {
+        "image_id": "test_008",
+        "image_file": "test_008.jpg",
+        "baseline_run_number": 1,
+        "extraction_run_number": 1,
+        "caption": "Two young girls are standing in a grassy area, with one petting a black goat and the other smiling beside a white goat.",
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+        "temperature": 0.0,
+        "status": "success",
+        "attempts": 1
+    }
+]

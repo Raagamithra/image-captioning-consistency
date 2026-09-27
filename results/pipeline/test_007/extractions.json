@@ -1,0 +1,258 @@
+[
+    {
+        "image_id": "test_007",
+        "image_file": "test_007.webp",
+        "baseline_run_number": 1,
+        "extraction_run_number": 1,
+        "caption": "A green bicycle leans against a brick wall covered in ivy, casting a long shadow in the warm sunlight.",
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+        "temperature": 0.0,
+        "status": "success",
+        "attempts": 1,
+        "original_csr": {
+            "entities": [
+                {
+                    "id": "e1",
+                    "type": "bicycle",
+                    "attributes": [
+                        "green"
+                    ]
+                },
+                {
+                    "id": "e2",
+                    "type": "wall",
+                    "attributes": [
+                        "brick",
+                        "covered in ivy"
+                    ]
+                },
+                {
+                    "id": "e3",
+                    "type": "shadow",
+                    "attributes": [
+                        "long"
+                    ]
+                }
+            ],
+            "actions": [
+                {
+                    "subject": "e1",
+                    "action": "lean",
+                    "object": null
+                },
+                {
+                    "subject": "e1",
+                    "action": "cast",
+                    "object": "e3"
+                }
+            ],
+            "relations": [
+                {
+                    "subject": "e1",
+                    "relation": "against",
+                    "object": "e2"
+                }
+            ],
+            "scene": {
+                "location": null,
+                "environment": [
+                    "warm sunlight"
+                ]
+            }
+        },
+        "csr": {
+            "entities": [
+                {
+                    "id": "e1",
+                    "type": "bicycle",
+                    "attributes": [
+                        "green"
+                    ]
+                },
+                {
+                    "id": "e2",
+                    "type": "shadow",
+                    "attributes": [
+                        "long"
+                    ]
+                },
+                {
+                    "id": "e3",
+                    "type": "wall",
+                    "attributes": [
+                        "brick",
+                        "covered_in_ivy"
+                    ]
+                }
+            ],
+            "actions": [
+                {
+                    "subject": "e1",
+                    "action": "cast",
+                    "object": "e2"
+                },
+                {
+                    "subject": "e1",
+                    "action": "lean",
+                    "object": null
+                }
+            ],
+            "relations": [
+                {
+                    "subject": "e1",
+                    "relation": "against",
+                    "object": "e3"
+                }
+            ],
+            "scene": {
+                "location": null,
+                "environment": [
+                    "warm_sunlight"
+                ]
+            }
+        },
+        "extraction_attempts": 1,
+        "raw_extraction_output": "{\n  \"entities\": [\n    {\n      \"id\": \"e1\",\n      \"type\": \"bicycle\",\n      \"attributes\": [\"green\"]\n    },\n    {\n      \"id\": \"e2\",\n      \"type\": \"wall\",\n      \"attributes\": [\"brick\", \"covered in ivy\"]\n    },\n    {\n      \"id\": \"e3\",\n      \"type\": \"shadow\",\n      \"attributes\": [\"long\"]\n    }\n  ],\n  \"actions\": [\n    {\n      \"subject\": \"e1\",\n      \"action\": \"lean\",\n      \"object\": null\n    },\n    {\n      \"subject\": \"e1\",\n      \"action\": \"cast\",\n      \"object\": \"e3\"\n    }\n  ],\n  \"relations\": [\n    {\n      \"subject\": \"e1\",\n      \"relation\": \"against\",\n      \"object\": \"e2\"\n    }\n  ],\n  \"scene\": {\n    \"location\": null,\n    \"environment\": [\"warm sunlight\"]\n  }\n}"
+    },
+    {
+        "image_id": "test_007",
+        "image_file": "test_007.webp",
+        "baseline_run_number": 2,
+        "extraction_run_number": 2,
+        "caption": "A green bicycle leans against a sunlit brick wall with ivy growing on the left side.",
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+        "temperature": 0.0,
+        "status": "success",
+        "attempts": 1,
+        "original_csr": {
+            "entities": [
+                {
+                    "id": "e1",
+                    "type": "bicycle",
+                    "attributes": [
+                        "green"
+                    ]
+                },
+                {
+                    "id": "e2",
+                    "type": "wall",
+                    "attributes": [
+                        "sunlit",
+                        "brick"
+                    ]
+                },
+                {
+                    "id": "e3",
+                    "type": "ivy",
+                    "attributes": []
+                },
+                {
+                    "id": "e4",
+                    "type": "side",
+                    "attributes": [
+                        "left"
+                    ]
+                }
+            ],
+            "actions": [
+                {
+                    "subject": "e1",
+                    "action": "lean",
+                    "object": null
+                },
+                {
+                    "subject": "e3",
+                    "action": "grow",
+                    "object": null
+                }
+            ],
+            "relations": [
+                {
+                    "subject": "e1",
+                    "relation": "against",
+                    "object": "e2"
+                },
+                {
+                    "subject": "e3",
+                    "relation": "on",
+                    "object": "e4"
+                },
+                {
+                    "subject": "e4",
+                    "relation": "of",
+                    "object": "e2"
+                }
+            ],
+            "scene": {
+                "location": null,
+                "environment": []
+            }
+        },
+        "csr": {
+            "entities": [
+                {
+                    "id": "e1",
+                    "type": "bicycle",
+                    "attributes": [
+                        "green"
+                    ]
+                },
+                {
+                    "id": "e2",
+                    "type": "ivy",
+                    "attributes": []
+                },
+                {
+                    "id": "e3",
+                    "type": "side",
+                    "attributes": [
+                        "left"
+                    ]
+                },
+                {
+                    "id": "e4",
+                    "type": "wall",
+                    "attributes": [
+                        "brick",
+                        "sunlit"
+                    ]
+                }
+            ],
+            "actions": [
+                {
+                    "subject": "e1",
+                    "action": "lean",
+                    "object": null
+                },
+                {
+                    "subject": "e2",
+                    "action": "grow",
+                    "object": null
+                }
+            ],
+            "relations": [
+                {
+                    "subject": "e1",
+                    "relation": "against",
+                    "object": "e4"
+                },
+                {
+                    "subject": "e2",
+                    "relation": "on",
+                    "object": "e3"
+                },
+                {
+                    "subject": "e3",
+                    "relation": "of",
+                    "object": "e4"
+                }
+            ],
+            "scene": {
+                "location": null,
+                "environment": []
+            }
+        },
+        "extraction_attempts": 1,
+        "raw_extraction_output": "{\n    \"entities\": [\n        {\n            \"id\": \"e1\",\n            \"type\": \"bicycle\",\n            \"attributes\": [\"green\"]\n        },\n        {\n            \"id\": \"e2\",\n            \"type\": \"wall\",\n            \"attributes\": [\"sunlit\", \"brick\"]\n        },\n        {\n            \"id\": \"e3\",\n            \"type\": \"ivy\",\n            \"attributes\": []\n        },\n        {\n            \"id\": \"e4\",\n            \"type\": \"side\",\n            \"attributes\": [\"left\"]\n        }\n    ],\n    \"actions\": [\n        {\n            \"subject\": \"e1\",\n            \"action\": \"lean\",\n            \"object\": null\n        },\n        {\n            \"subject\": \"e3\",\n            \"action\": \"grow\",\n            \"object\": null\n        }\n    ],\n    \"relations\": [\n        {\n            \"subject\": \"e1\",\n            \"relation\": \"against\",\n            \"object\": \"e2\"\n        },\n        {\n            \"subject\": \"e3\",\n            \"relation\": \"on\",\n            \"object\": \"e4\"\n        },\n        {\n            \"subject\": \"e4\",\n            \"relation\": \"of\",\n            \"object\": \"e2\"\n        }\n    ],\n    \"scene\": {\n        \"location\": null,\n        \"environment\": []\n    }\n}"
+    }
+]

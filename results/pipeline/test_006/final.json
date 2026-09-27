@@ -1,0 +1,8 @@
+[
+    {
+        "image_id": "test_006",
+        "status": "success",
+        "caption": "A tabby cat with a white chest sits on a windowsill looking out the window.",
+        "selection_method": "first_successful_run"
+    }
+]

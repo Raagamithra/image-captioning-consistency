@@ -1,0 +1,61 @@
+[
+    {
+        "pair_id": "test_006_1_1_2",
+        "image_id": "test_006",
+        "record_a": {
+            "baseline_run_number": 1,
+            "extraction_run_number": 1
+        },
+        "record_b": {
+            "baseline_run_number": 2,
+            "extraction_run_number": 2
+        },
+        "status": "success",
+        "alignment": {
+            "entity_matches": [
+                {
+                    "a": "e1",
+                    "b": "e1"
+                },
+                {
+                    "a": "e3",
+                    "b": "e3"
+                }
+            ],
+            "attribute_matches": [
+                {
+                    "entity_a": "e1",
+                    "entity_b": "e1",
+                    "matches": [
+                        {
+                            "a": "tabby",
+                            "b": "tabby"
+                        },
+                        {
+                            "a": "white_chest",
+                            "b": "white_chest"
+                        }
+                    ]
+                }
+            ],
+            "action_matches": [
+                {
+                    "a_index": 1,
+                    "b_index": 1,
+                    "confidence": 0.95
+                }
+            ],
+            "relation_matches": [
+                {
+                    "a_index": 0,
+                    "b_index": 0,
+                    "confidence": 0.95
+                }
+            ],
+            "scene_match": {
+                "equivalent": false,
+                "confidence": 0.1
+            }
+        }
+    }
+]

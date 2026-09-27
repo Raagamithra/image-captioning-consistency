@@ -1,0 +1,147 @@
+[
+    {
+        "image_id": "test_013",
+        "image_file": "test_013.jpg",
+        "baseline_run_number": 1,
+        "extraction_run_number": 1,
+        "caption": "An abundant display of fresh produce featuring strawberries, broccoli, cucumbers, radishes, asparagus, carrots, red potatoes, and peas.",
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+        "temperature": 0.0,
+        "status": "success",
+        "attempts": 3,
+        "original_csr": {
+            "entities": [
+                {
+                    "id": "e1",
+                    "type": "strawberries",
+                    "attributes": [
+                        "fresh"
+                    ]
+                },
+                {
+                    "id": "e2",
+                    "type": "broccoli",
+                    "attributes": [
+                        "fresh"
+                    ]
+                },
+                {
+                    "id": "e3",
+                    "type": "cucumbers",
+                    "attributes": [
+                        "fresh"
+                    ]
+                },
+                {
+                    "id": "e4",
+                    "type": "radishes",
+                    "attributes": [
+                        "fresh"
+                    ]
+                },
+                {
+                    "id": "e5",
+                    "type": "asparagus",
+                    "attributes": [
+                        "fresh"
+                    ]
+                },
+                {
+                    "id": "e6",
+                    "type": "carrots",
+                    "attributes": [
+                        "fresh"
+                    ]
+                },
+                {
+                    "id": "e7",
+                    "type": "red potatoes",
+                    "attributes": [
+                        "fresh"
+                    ]
+                },
+                {
+                    "id": "e8",
+                    "type": "peas",
+                    "attributes": [
+                        "fresh"
+                    ]
+                }
+            ],
+            "actions": [],
+            "relations": [],
+            "scene": {
+                "location": null,
+                "environment": []
+            }
+        },
+        "csr": {
+            "entities": [
+                {
+                    "id": "e1",
+                    "type": "asparagus",
+                    "attributes": [
+                        "fresh"
+                    ]
+                },
+                {
+                    "id": "e2",
+                    "type": "broccoli",
+                    "attributes": [
+                        "fresh"
+                    ]
+                },
+                {
+                    "id": "e3",
+                    "type": "carrots",
+                    "attributes": [
+                        "fresh"
+                    ]
+                },
+                {
+                    "id": "e4",
+                    "type": "cucumbers",
+                    "attributes": [
+                        "fresh"
+                    ]
+                },
+                {
+                    "id": "e5",
+                    "type": "peas",
+                    "attributes": [
+                        "fresh"
+                    ]
+                },
+                {
+                    "id": "e6",
+                    "type": "radishes",
+                    "attributes": [
+                        "fresh"
+                    ]
+                },
+                {
+                    "id": "e7",
+                    "type": "red_potatoes",
+                    "attributes": [
+                        "fresh"
+                    ]
+                },
+                {
+                    "id": "e8",
+                    "type": "strawberries",
+                    "attributes": [
+                        "fresh"
+                    ]
+                }
+            ],
+            "actions": [],
+            "relations": [],
+            "scene": {
+                "location": null,
+                "environment": []
+            }
+        },
+        "extraction_attempts": 1,
+        "raw_extraction_output": "{\n    \"entities\": [\n        {\n            \"id\": \"e1\",\n            \"type\": \"strawberries\",\n            \"attributes\": [\"fresh\"]\n        },\n        {\n            \"id\": \"e2\",\n            \"type\": \"broccoli\",\n            \"attributes\": [\"fresh\"]\n        },\n        {\n            \"id\": \"e3\",\n            \"type\": \"cucumbers\",\n            \"attributes\": [\"fresh\"]\n        },\n        {\n            \"id\": \"e4\",\n            \"type\": \"radishes\",\n            \"attributes\": [\"fresh\"]\n        },\n        {\n            \"id\": \"e5\",\n            \"type\": \"asparagus\",\n            \"attributes\": [\"fresh\"]\n        },\n        {\n            \"id\": \"e6\",\n            \"type\": \"carrots\",\n            \"attributes\": [\"fresh\"]\n        },\n        {\n            \"id\": \"e7\",\n            \"type\": \"red potatoes\",\n            \"attributes\": [\"fresh\"]\n        },\n        {\n            \"id\": \"e8\",\n            \"type\": \"peas\",\n            \"attributes\": [\"fresh\"]\n        }\n    ],\n    \"actions\": [],\n    \"relations\": [],\n    \"scene\": {\n        \"location\": null,\n        \"environment\": []\n    }\n}"
+    }
+]

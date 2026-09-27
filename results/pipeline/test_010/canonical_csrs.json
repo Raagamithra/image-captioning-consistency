@@ -1,0 +1,105 @@
+[
+    {
+        "image_id": "test_010",
+        "image_file": "test_010.jpg",
+        "baseline_run_number": 1,
+        "extraction_run_number": 1,
+        "caption": "A white horse pulls a green and red trolley car labeled 'Disneyland' through a park.",
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+        "temperature": 0.0,
+        "status": "success",
+        "attempts": 1,
+        "original_csr": {
+            "entities": [
+                {
+                    "id": "e1",
+                    "type": "horse",
+                    "attributes": [
+                        "white"
+                    ]
+                },
+                {
+                    "id": "e2",
+                    "type": "trolley car",
+                    "attributes": [
+                        "green",
+                        "red",
+                        "labeled 'Disneyland'"
+                    ]
+                },
+                {
+                    "id": "e3",
+                    "type": "park",
+                    "attributes": []
+                }
+            ],
+            "actions": [
+                {
+                    "subject": "e1",
+                    "action": "pull",
+                    "object": "e2"
+                }
+            ],
+            "relations": [
+                {
+                    "subject": "e1",
+                    "relation": "through",
+                    "object": "e3"
+                }
+            ],
+            "scene": {
+                "location": "park",
+                "environment": [
+                    "park"
+                ]
+            }
+        },
+        "csr": {
+            "entities": [
+                {
+                    "id": "e1",
+                    "type": "horse",
+                    "attributes": [
+                        "white"
+                    ]
+                },
+                {
+                    "id": "e2",
+                    "type": "park",
+                    "attributes": []
+                },
+                {
+                    "id": "e3",
+                    "type": "trolley_car",
+                    "attributes": [
+                        "green",
+                        "labeled_'disneyland'",
+                        "red"
+                    ]
+                }
+            ],
+            "actions": [
+                {
+                    "subject": "e1",
+                    "action": "pull",
+                    "object": "e3"
+                }
+            ],
+            "relations": [
+                {
+                    "subject": "e1",
+                    "relation": "through",
+                    "object": "e2"
+                }
+            ],
+            "scene": {
+                "location": "park",
+                "environment": [
+                    "park"
+                ]
+            }
+        },
+        "extraction_attempts": 1,
+        "raw_extraction_output": "{\n    \"entities\": [\n        {\n            \"id\": \"e1\",\n            \"type\": \"horse\",\n            \"attributes\": [\"white\"]\n        },\n        {\n            \"id\": \"e2\",\n            \"type\": \"trolley car\",\n            \"attributes\": [\"green\", \"red\", \"labeled 'Disneyland'\"]\n        },\n        {\n            \"id\": \"e3\",\n            \"type\": \"park\",\n            \"attributes\": []\n        }\n    ],\n    \"actions\": [\n        {\n            \"subject\": \"e1\",\n            \"action\": \"pull\",\n            \"object\": \"e2\"\n        }\n    ],\n    \"relations\": [\n        {\n            \"subject\": \"e1\",\n            \"relation\": \"through\",\n            \"object\": \"e3\"\n        }\n    ],\n    \"scene\": {\n        \"location\": \"park\",\n        \"environment\": [\"park\"]\n    }\n}"
+    }
+]

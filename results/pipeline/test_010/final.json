@@ -1,0 +1,53 @@
+[
+    {
+        "image_id": "test_010",
+        "status": "success",
+        "caption": "A white horse pulls a green red trolley car with a labeled 'disneyland'. The white horse is through a park. The scene is set in a park.",
+        "csr": {
+            "image_id": "test_010",
+            "entities": [
+                {
+                    "id": "e1",
+                    "type": "horse",
+                    "attributes": [
+                        "white"
+                    ]
+                },
+                {
+                    "id": "e2",
+                    "type": "park",
+                    "attributes": []
+                },
+                {
+                    "id": "e3",
+                    "type": "trolley_car",
+                    "attributes": [
+                        "green",
+                        "labeled_'disneyland'",
+                        "red"
+                    ]
+                }
+            ],
+            "actions": [
+                {
+                    "subject": "e1",
+                    "action": "pull",
+                    "object": "e3"
+                }
+            ],
+            "relations": [
+                {
+                    "subject": "e1",
+                    "relation": "through",
+                    "object": "e2"
+                }
+            ],
+            "scene": {
+                "location": "park",
+                "environment": [
+                    "park"
+                ]
+            }
+        }
+    }
+]

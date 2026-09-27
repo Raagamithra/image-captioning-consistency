@@ -1,0 +1,205 @@
+[
+    {
+        "image_id": "test_009",
+        "image_file": "test_009.jpg",
+        "baseline_run_number": 1,
+        "extraction_run_number": 1,
+        "caption": "A tennis match is in progress on a blue court between R. Ivanovic and R. Mauresmo, with a player in purple hitting the ball while her opponent in red waits at the baseline.",
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+        "temperature": 0.0,
+        "status": "success",
+        "attempts": 1,
+        "original_csr": {
+            "entities": [
+                {
+                    "id": "e1",
+                    "type": "match",
+                    "attributes": [
+                        "in progress"
+                    ]
+                },
+                {
+                    "id": "e2",
+                    "type": "court",
+                    "attributes": [
+                        "blue"
+                    ]
+                },
+                {
+                    "id": "e3",
+                    "type": "player",
+                    "attributes": [
+                        "R. Ivanovic",
+                        "purple"
+                    ]
+                },
+                {
+                    "id": "e4",
+                    "type": "player",
+                    "attributes": [
+                        "R. Mauresmo",
+                        "red"
+                    ]
+                },
+                {
+                    "id": "e5",
+                    "type": "ball",
+                    "attributes": []
+                },
+                {
+                    "id": "e6",
+                    "type": "baseline",
+                    "attributes": []
+                }
+            ],
+            "actions": [
+                {
+                    "subject": "e3",
+                    "action": "hit",
+                    "object": "e5"
+                },
+                {
+                    "subject": "e4",
+                    "action": "wait",
+                    "object": null
+                }
+            ],
+            "relations": [
+                {
+                    "subject": "e1",
+                    "relation": "on",
+                    "object": "e2"
+                },
+                {
+                    "subject": "e3",
+                    "relation": "on",
+                    "object": "e2"
+                },
+                {
+                    "subject": "e4",
+                    "relation": "at",
+                    "object": "e6"
+                },
+                {
+                    "subject": "e4",
+                    "relation": "opponent_of",
+                    "object": "e3"
+                },
+                {
+                    "subject": "e3",
+                    "relation": "participant_in",
+                    "object": "e1"
+                },
+                {
+                    "subject": "e4",
+                    "relation": "participant_in",
+                    "object": "e1"
+                }
+            ],
+            "scene": {
+                "location": "blue court",
+                "environment": [
+                    "tennis match",
+                    "in progress"
+                ]
+            }
+        },
+        "csr": {
+            "entities": [
+                {
+                    "id": "e1",
+                    "type": "ball",
+                    "attributes": []
+                },
+                {
+                    "id": "e2",
+                    "type": "baseline",
+                    "attributes": []
+                },
+                {
+                    "id": "e3",
+                    "type": "court",
+                    "attributes": [
+                        "blue"
+                    ]
+                },
+                {
+                    "id": "e4",
+                    "type": "match",
+                    "attributes": [
+                        "in_progress"
+                    ]
+                },
+                {
+                    "id": "e5",
+                    "type": "player",
+                    "attributes": [
+                        "purple",
+                        "r._ivanovic"
+                    ]
+                },
+                {
+                    "id": "e6",
+                    "type": "player",
+                    "attributes": [
+                        "r._mauresmo",
+                        "red"
+                    ]
+                }
+            ],
+            "actions": [
+                {
+                    "subject": "e5",
+                    "action": "hit",
+                    "object": "e1"
+                },
+                {
+                    "subject": "e6",
+                    "action": "wait",
+                    "object": null
+                }
+            ],
+            "relations": [
+                {
+                    "subject": "e4",
+                    "relation": "on",
+                    "object": "e3"
+                },
+                {
+                    "subject": "e5",
+                    "relation": "on",
+                    "object": "e3"
+                },
+                {
+                    "subject": "e5",
+                    "relation": "participant_in",
+                    "object": "e4"
+                },
+                {
+                    "subject": "e6",
+                    "relation": "at",
+                    "object": "e2"
+                },
+                {
+                    "subject": "e6",
+                    "relation": "opponent_of",
+                    "object": "e5"
+                },
+                {
+                    "subject": "e6",
+                    "relation": "participant_in",
+                    "object": "e4"
+                }
+            ],
+            "scene": {
+                "location": "blue_court",
+                "environment": [
+                    "in_progress",
+                    "tennis_match"
+                ]
+            }
+        },
+        "extraction_attempts": 1,
+        "raw_extraction_output": "{\n \"entities\": [\n        {\n            \"id\": \"e1\",\n            \"type\": \"match\",\n            \"attributes\": [\"in progress\"]\n        },\n        {\n            \"id\": \"e2\",\n            \"type\": \"court\",\n            \"attributes\": [\"blue\"]\n        },\n        {\n            \"id\": \"e3\",\n            \"type\": \"player\",\n            \"attributes\": [\"R. Ivanovic\", \"purple\"]\n        },\n        {\n            \"id\": \"e4\",\n            \"type\": \"player\",\n            \"attributes\": [\"R. Mauresmo\", \"red\"]\n        },\n        {\n            \"id\": \"e5\",\n            \"type\": \"ball\",\n            \"attributes\": []\n        },\n        {\n            \"id\": \"e6\",\n            \"type\": \"baseline\",\n            \"attributes\": []\n        }\n    ],\n    \"actions\": [\n        {\n            \"subject\": \"e3\",\n            \"action\": \"hit\",\n            \"object\": \"e5\"\n        },\n        {\n            \"subject\": \"e4\",\n            \"action\": \"wait\",\n            \"object\": null\n        }\n    ],\n    \"relations\": [\n        {\n            \"subject\": \"e1\",\n            \"relation\": \"on\",\n            \"object\": \"e2\"\n        },\n        {\n            \"subject\": \"e3\",\n            \"relation\": \"on\",\n            \"object\": \"e2\"\n        },\n        {\n            \"subject\": \"e4\",\n            \"relation\": \"at\",\n            \"object\": \"e6\"\n        },\n        {\n            \"subject\": \"e4\",\n            \"relation\": \"opponent_of\",\n            \"object\": \"e3\"\n        },\n        {\n            \"subject\": \"e3\",\n            \"relation\": \"participant_in\",\n            \"object\": \"e1\"\n        },\n        {\n            \"subject\": \"e4\",\n            \"relation\": \"participant_in\",\n            \"object\": \"e1\"\n        }\n    ],\n    \"scene\": {\n        \"location\": \"blue court\",\n        \"environment\": [\"tennis match\", \"in progress\"]\n    }\n}"
+    }
+]

@@ -6,16 +6,12 @@
             {
                 "id": "e1",
                 "type": "dog",
-                "attributes": [
-                    "brown"
-                ]
+                "attributes": []
             },
             {
                 "id": "e2",
                 "type": "field",
-                "attributes": [
-                    "grassy"
-                ]
+                "attributes": []
             },
             {
                 "id": "e3",
@@ -35,25 +31,20 @@
         "relations": [
             {
                 "subject": "e1",
-                "relation": "through",
+                "relation": "across",
                 "object": "e2"
-            },
-            {
-                "subject": "e2",
-                "relation": "dotted_with",
-                "object": "e3"
             }
         ],
         "scene": {
             "location": null,
             "environment": [
-                "outdoor"
+                "yellow_flowers"
             ]
         }
     },
     "provenance": {
         "consensus_policy": {
-            "number_of_runs": 3,
+            "number_of_runs": 2,
             "minimum_support": 2,
             "rule": "strict majority"
         },
@@ -62,24 +53,24 @@
         "minority_relations": [
             {
                 "fact": {
-                    "subject": "e1",
-                    "relation": "across",
-                    "object": "e2"
+                    "subject": "e2",
+                    "relation": "dotted_with",
+                    "object": "e3"
                 },
                 "support": 1,
                 "runs": [
-                    0
+                    1
                 ]
             },
             {
                 "fact": {
-                    "subject": "e3",
-                    "relation": "in",
-                    "object": "e2"
+                    "subject": "e2",
+                    "relation": "filled_with",
+                    "object": "e3"
                 },
                 "support": 1,
                 "runs": [
-                    2
+                    0
                 ]
             }
         ],
@@ -89,21 +80,14 @@
             },
             "minority_environment": [
                 {
-                    "value": "grassy_field",
+                    "value": "grassy",
                     "support": 1,
                     "runs": [
-                        1
+                        0
                     ]
                 },
                 {
-                    "value": "nature",
-                    "support": 1,
-                    "runs": [
-                        2
-                    ]
-                },
-                {
-                    "value": "yellow_flowers",
+                    "value": "green_field",
                     "support": 1,
                     "runs": [
                         1

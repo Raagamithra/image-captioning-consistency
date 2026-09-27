@@ -1,0 +1,24 @@
+[
+    {
+        "image_id": "test_007",
+        "image_file": "test_007.webp",
+        "baseline_run_number": 1,
+        "extraction_run_number": 1,
+        "caption": "A green bicycle leans against a brick wall covered in ivy, casting a long shadow in the warm sunlight.",
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+        "temperature": 0.0,
+        "status": "success",
+        "attempts": 1
+    },
+    {
+        "image_id": "test_007",
+        "image_file": "test_007.webp",
+        "baseline_run_number": 2,
+        "extraction_run_number": 2,
+        "caption": "A green bicycle leans against a sunlit brick wall with ivy growing on the left side.",
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+        "temperature": 0.0,
+        "status": "success",
+        "attempts": 1
+    }
+]

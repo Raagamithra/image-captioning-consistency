@@ -1,0 +1,13 @@
+[
+    {
+        "image_id": "test_012",
+        "image_file": "test_012.jpg",
+        "baseline_run_number": 1,
+        "extraction_run_number": 1,
+        "caption": "A black and white photo shows a smiling woman wearing a wide-brimmed hat, a striped top, and a tie, holding a cigarette near her mouth.",
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+        "temperature": 0.0,
+        "status": "success",
+        "attempts": 1
+    }
+]

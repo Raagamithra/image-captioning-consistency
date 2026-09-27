@@ -1,0 +1,89 @@
+[
+    {
+        "image_id": "test_008",
+        "csr": {
+            "image_id": "test_008",
+            "entities": [
+                {
+                    "id": "e1",
+                    "type": "area",
+                    "attributes": [
+                        "grassy"
+                    ]
+                },
+                {
+                    "id": "e2",
+                    "type": "girl",
+                    "attributes": [
+                        "young"
+                    ]
+                },
+                {
+                    "id": "e3",
+                    "type": "goat",
+                    "attributes": [
+                        "black"
+                    ]
+                },
+                {
+                    "id": "e4",
+                    "type": "goat",
+                    "attributes": [
+                        "white"
+                    ]
+                }
+            ],
+            "actions": [
+                {
+                    "subject": "e2",
+                    "action": "pet",
+                    "object": "e3"
+                },
+                {
+                    "subject": "e2",
+                    "action": "smile",
+                    "object": null
+                },
+                {
+                    "subject": "e2",
+                    "action": "stand",
+                    "object": null
+                }
+            ],
+            "relations": [
+                {
+                    "subject": "e2",
+                    "relation": "beside",
+                    "object": "e4"
+                },
+                {
+                    "subject": "e2",
+                    "relation": "in",
+                    "object": "e1"
+                }
+            ],
+            "scene": {
+                "location": "grassy_area",
+                "environment": [
+                    "grassy"
+                ]
+            }
+        },
+        "provenance": {
+            "consensus_policy": {
+                "number_of_runs": 1,
+                "minimum_support": 1,
+                "rule": "strict majority"
+            },
+            "minority_entities": [],
+            "minority_actions": [],
+            "minority_relations": [],
+            "scene": {
+                "location_support": {
+                    "grassy_area": 1
+                },
+                "minority_environment": []
+            }
+        }
+    }
+]

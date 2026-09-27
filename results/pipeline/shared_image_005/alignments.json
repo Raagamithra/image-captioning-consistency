@@ -1,0 +1,79 @@
+[
+    {
+        "pair_id": "shared_image_005_1_1_2",
+        "image_id": "shared_image_005",
+        "record_a": {
+            "baseline_run_number": 1,
+            "extraction_run_number": 1
+        },
+        "record_b": {
+            "baseline_run_number": 2,
+            "extraction_run_number": 2
+        },
+        "status": "success",
+        "alignment": {
+            "entity_matches": [
+                {
+                    "a": "e3",
+                    "b": "e1"
+                },
+                {
+                    "a": "e4",
+                    "b": "e2"
+                },
+                {
+                    "a": "e5",
+                    "b": "e4"
+                },
+                {
+                    "a": "e6",
+                    "b": "e5"
+                }
+            ],
+            "attribute_matches": [
+                {
+                    "entity_a": "e3",
+                    "entity_b": "e1",
+                    "matches": [
+                        {
+                            "a": "sunlit",
+                            "b": "bright"
+                        }
+                    ]
+                },
+                {
+                    "entity_a": "e6",
+                    "entity_b": "e5",
+                    "matches": [
+                        {
+                            "a": "educational",
+                            "b": "educational"
+                        },
+                        {
+                            "a": "wooden",
+                            "b": "wooden"
+                        }
+                    ]
+                }
+            ],
+            "action_matches": [
+                {
+                    "a_index": 3,
+                    "b_index": 1,
+                    "confidence": 0.9
+                }
+            ],
+            "relation_matches": [
+                {
+                    "a_index": 0,
+                    "b_index": 1,
+                    "confidence": 0.9
+                }
+            ],
+            "scene_match": {
+                "equivalent": true,
+                "confidence": 0.8
+            }
+        }
+    }
+]

@@ -1,0 +1,24 @@
+[
+    {
+        "image_id": "test_006",
+        "image_file": "test_006.jpg",
+        "baseline_run_number": 1,
+        "extraction_run_number": 1,
+        "caption": "A tabby cat with a white chest sits on a windowsill looking out the window.",
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+        "temperature": 0.0,
+        "status": "success",
+        "attempts": 2
+    },
+    {
+        "image_id": "test_006",
+        "image_file": "test_006.jpg",
+        "baseline_run_number": 2,
+        "extraction_run_number": 2,
+        "caption": "A tabby cat with a white chest sits on a windowsill looking out at the green trees outside.",
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+        "temperature": 0.0,
+        "status": "success",
+        "attempts": 1
+    }
+]

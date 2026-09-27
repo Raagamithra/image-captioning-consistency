@@ -1,0 +1,189 @@
+[
+    {
+        "image_id": "test_012",
+        "image_file": "test_012.jpg",
+        "baseline_run_number": 1,
+        "extraction_run_number": 1,
+        "caption": "A black and white photo shows a smiling woman wearing a wide-brimmed hat, a striped top, and a tie, holding a cigarette near her mouth.",
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+        "temperature": 0.0,
+        "status": "success",
+        "attempts": 1,
+        "original_csr": {
+            "entities": [
+                {
+                    "id": "e1",
+                    "type": "woman",
+                    "attributes": [
+                        "smiling"
+                    ]
+                },
+                {
+                    "id": "e2",
+                    "type": "hat",
+                    "attributes": [
+                        "wide-brimmed"
+                    ]
+                },
+                {
+                    "id": "e3",
+                    "type": "top",
+                    "attributes": [
+                        "striped"
+                    ]
+                },
+                {
+                    "id": "e4",
+                    "type": "tie",
+                    "attributes": []
+                },
+                {
+                    "id": "e5",
+                    "type": "cigarette",
+                    "attributes": []
+                },
+                {
+                    "id": "e6",
+                    "type": "photo",
+                    "attributes": [
+                        "black and white"
+                    ]
+                }
+            ],
+            "actions": [
+                {
+                    "subject": "e1",
+                    "action": "smile",
+                    "object": null
+                },
+                {
+                    "subject": "e1",
+                    "action": "wear",
+                    "object": "e2"
+                },
+                {
+                    "subject": "e1",
+                    "action": "wear",
+                    "object": "e3"
+                },
+                {
+                    "subject": "e1",
+                    "action": "wear",
+                    "object": "e4"
+                },
+                {
+                    "subject": "e1",
+                    "action": "hold",
+                    "object": "e5"
+                }
+            ],
+            "relations": [
+                {
+                    "subject": "e5",
+                    "relation": "near",
+                    "object": "e1"
+                },
+                {
+                    "subject": "e6",
+                    "relation": "shows",
+                    "object": "e1"
+                }
+            ],
+            "scene": {
+                "location": null,
+                "environment": [
+                    "black and white photo"
+                ]
+            }
+        },
+        "csr": {
+            "entities": [
+                {
+                    "id": "e1",
+                    "type": "cigarette",
+                    "attributes": []
+                },
+                {
+                    "id": "e2",
+                    "type": "hat",
+                    "attributes": [
+                        "wide_brimmed"
+                    ]
+                },
+                {
+                    "id": "e3",
+                    "type": "photo",
+                    "attributes": [
+                        "black_and_white"
+                    ]
+                },
+                {
+                    "id": "e4",
+                    "type": "tie",
+                    "attributes": []
+                },
+                {
+                    "id": "e5",
+                    "type": "top",
+                    "attributes": [
+                        "striped"
+                    ]
+                },
+                {
+                    "id": "e6",
+                    "type": "woman",
+                    "attributes": [
+                        "smiling"
+                    ]
+                }
+            ],
+            "actions": [
+                {
+                    "subject": "e6",
+                    "action": "hold",
+                    "object": "e1"
+                },
+                {
+                    "subject": "e6",
+                    "action": "smile",
+                    "object": null
+                },
+                {
+                    "subject": "e6",
+                    "action": "wear",
+                    "object": "e2"
+                },
+                {
+                    "subject": "e6",
+                    "action": "wear",
+                    "object": "e4"
+                },
+                {
+                    "subject": "e6",
+                    "action": "wear",
+                    "object": "e5"
+                }
+            ],
+            "relations": [
+                {
+                    "subject": "e1",
+                    "relation": "near",
+                    "object": "e6"
+                },
+                {
+                    "subject": "e3",
+                    "relation": "shows",
+                    "object": "e6"
+                }
+            ],
+            "scene": {
+                "location": null,
+                "environment": [
+                    "black_and_white_photo"
+                ]
+            }
+        },
+        "extraction_attempts": 1,
+        "raw_extraction_output": "{\n    \"entities\": [\n        {\n            \"id\": \"e1\",\n            \"type\": \"woman\",\n            \"attributes\": [\"smiling\"]\n        },\n        {\n            \"id\": \"e2\",\n            \"type\": \"hat\",\n            \"attributes\": [\"wide-brimmed\"]\n        },\n        {\n            \"id\": \"e3\",\n            \"type\": \"top\",\n            \"attributes\": [\"striped\"]\n        },\n        {\n            \"id\": \"e4\",\n            \"type\": \"tie\",\n            \"attributes\": []\n        },\n        {\n            \"id\": \"e5\",\n            \"type\": \"cigarette\",\n            \"attributes\": []\n        },\n        {\n            \"id\": \"e6\",\n            \"type\": \"photo\",\n            \"attributes\": [\"black and white\"]\n        }\n    ],\n    \"actions\": [\n        {\n            \"subject\": \"e1\",\n            \"action\": \"smile\",\n            \"object\": null\n        },\n        {\n            \"subject\": \"e1\",\n            \"action\": \"wear\",\n            \"object\": \"e2\"\n        },\n        {\n            \"subject\": \"e1\",\n            \"action\": \"wear\",\n            \"object\": \"e3\"\n        },\n        {\n            \"subject\": \"e1\",\n            \"action\": \"wear\",\n            \"object\": \"e4\"\n        },\n        {\n            \"subject\": \"e1\",\n            \"action\": \"hold\",\n            \"object\": \"e5\"\n        }\n    ],\n    \"relations\": [\n        {\n            \"subject\": \"e5\",\n            \"relation\": \"near\",\n            \"object\": \"e1\"\n        },\n        {\n            \"subject\": \"e6\",\n            \"relation\": \"shows\",\n            \"object\": \"e1\"\n        }\n    ],\n    \"scene\": {\n        \"location\": null,\n        \"environment\": [\"black and white photo\"]\n    }\n}"
+    }
+]

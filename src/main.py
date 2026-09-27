@@ -1,4 +1,3 @@
-
 import argparse
 import json
 import sys
@@ -37,7 +36,6 @@ from src.semantic_aligner import (
 )
 from src.consensus_builder import build_consensus
 from src.csr_validator import validate_csr
-from src.deterministic_renderer_v3 import render_csr
 
 
 # ============================================================
@@ -92,6 +90,20 @@ def save_json(path, data):
         )
 
 
+def load_json(path):
+    """
+    Load JSON data from a file.
+    """
+
+    with open(
+        path,
+        "r",
+        encoding="utf-8",
+    ) as file:
+
+        return json.load(file)
+
+
 # ============================================================
 # FROZEN CONSENSUS UTILITIES
 # ============================================================
@@ -124,18 +136,11 @@ def load_frozen_consensus(image_id):
     if not path.exists():
         return None
 
-    with open(
-        path,
-        "r",
-        encoding="utf-8",
-    ) as file:
-
-        data = json.load(file)
+    data = load_json(path)
 
     if not isinstance(data, dict):
         raise ValueError(
-            f"Invalid frozen consensus file: "
-            f"{path}"
+            f"Invalid frozen consensus file: {path}"
         )
 
     if data.get("image_id") != image_id:
@@ -146,14 +151,12 @@ def load_frozen_consensus(image_id):
 
     if "csr" not in data:
         raise ValueError(
-            f"Frozen consensus missing csr: "
-            f"{path}"
+            f"Frozen consensus missing csr: {path}"
         )
 
     if not isinstance(data["csr"], dict):
         raise ValueError(
-            f"Frozen consensus csr must be an object: "
-            f"{path}"
+            f"Frozen consensus csr must be an object: {path}"
         )
 
     return data
@@ -230,8 +233,7 @@ def get_images(
             if path.suffix.lower() not in SUPPORTED_EXTENSIONS:
 
                 raise ValueError(
-                    f"Unsupported image format: "
-                    f"{path}"
+                    f"Unsupported image format: {path}"
                 )
 
             images.append(path)
@@ -251,8 +253,7 @@ def get_images(
     if not directory.exists():
 
         raise FileNotFoundError(
-            f"Image directory not found: "
-            f"{directory}"
+            f"Image directory not found: {directory}"
         )
 
     images = [
@@ -270,8 +271,7 @@ def get_images(
     if not images:
 
         raise ValueError(
-            f"No supported images found in "
-            f"{directory}"
+            f"No supported images found in {directory}"
         )
 
     return images
@@ -932,20 +932,61 @@ def validate_consensus_csrs(
 
 
 # ============================================================
-# STEP 7 — DETERMINISTIC RENDERING
+# STEP 7 — ORIGINAL CAPTION SELECTION
 # ============================================================
+
+def select_original_caption(records):
+    """
+    Select exactly one original generated caption.
+
+    Current deterministic selection rule:
+        Choose the first successful run.
+
+    This returns the original caption text unchanged.
+    It does not construct a new sentence from CSR facts.
+    """
+
+    successful = [
+        record
+        for record in records
+        if (
+            record.get("status") == "success"
+            and record.get("caption")
+        )
+    ]
+
+    if not successful:
+
+        raise RuntimeError(
+            "No successful original captions available."
+        )
+
+    selected = min(
+        successful,
+        key=lambda record: record.get(
+            "baseline_run_number",
+            float("inf"),
+        ),
+    )
+
+    return selected["caption"]
+
 
 def render_consensus_csrs(
     consensus_results,
     validation_results,
+    baseline_records,
 ):
     """
-    Render validated consensus CSRs using the deterministic
-    renderer.
+    Select one original caption for each validated
+    consensus CSR.
+
+    The consensus CSR is still validated, but the final
+    text is selected from the original generated captions.
     """
 
     print(
-        "\nDeterministic rendering..."
+        "\nFinal caption selection..."
     )
 
     validation_map = {
@@ -953,6 +994,15 @@ def render_consensus_csrs(
             result["valid"]
         for result in validation_results
     }
+
+    captions_by_image = {}
+
+    for record in baseline_records:
+
+        captions_by_image.setdefault(
+            record["image_id"],
+            [],
+        ).append(record)
 
     final_results = []
 
@@ -962,10 +1012,6 @@ def render_consensus_csrs(
             "image_id"
         ]
 
-        csr = item[
-            "csr"
-        ]
-
         if not validation_map.get(
             image_id,
             False,
@@ -973,7 +1019,7 @@ def render_consensus_csrs(
 
             print(
                 f"  {image_id}: SKIPPED "
-                f"(invalid CSR)"
+                "(invalid CSR)"
             )
 
             final_results.append(
@@ -993,8 +1039,11 @@ def render_consensus_csrs(
 
         try:
 
-            caption = render_csr(
-                csr
+            caption = select_original_caption(
+                captions_by_image.get(
+                    image_id,
+                    [],
+                )
             )
 
             final_results.append(
@@ -1008,8 +1057,8 @@ def render_consensus_csrs(
                     "caption":
                         caption,
 
-                    "csr":
-                        csr,
+                    "selection_method":
+                        "first_successful_run",
                 }
             )
 
@@ -1061,12 +1110,16 @@ def run_pipeline(
 
     Normal execution:
         - If a frozen CSR exists, reuse it.
-        - Otherwise establish a new consensus CSR.
+        - Load the original captions saved for that image.
+        - Validate the frozen CSR.
+        - Select one original caption.
 
     Rebuild execution:
         - Ignore the existing frozen CSR.
         - Run the stochastic stages again.
-        - Replace the frozen CSR with the new consensus.
+        - Save the new original captions.
+        - Build, validate, and freeze the new consensus.
+        - Select one original caption.
     """
 
     timestamp = datetime.now(
@@ -1192,6 +1245,38 @@ def run_pipeline(
                     frozen_consensus
                 ]
 
+                # Load the original captions from the
+                # pipeline artifacts created when this
+                # consensus was first established.
+                baseline_file = (
+                    image_dir
+                    / "baseline.json"
+                )
+
+                if not baseline_file.exists():
+
+                    raise RuntimeError(
+                        "Original baseline captions are "
+                        "missing for this frozen consensus. "
+                        "Run this image with --rebuild to "
+                        "generate and save the original "
+                        "captions again."
+                    )
+
+                baseline_records = load_json(
+                    baseline_file
+                )
+
+                if not isinstance(
+                    baseline_records,
+                    list,
+                ):
+
+                    raise ValueError(
+                        "Invalid baseline.json: expected "
+                        "a list of caption records."
+                    )
+
                 # Save a trace copy for this execution.
                 save_json(
                     image_dir
@@ -1216,13 +1301,14 @@ def run_pipeline(
                 )
 
                 # ------------------------------------------------
-                # Deterministic rendering
+                # Select one original caption
                 # ------------------------------------------------
 
                 final_results = (
                     render_consensus_csrs(
                         consensus_results,
                         validation_results,
+                        baseline_records,
                     )
                 )
 
@@ -1378,26 +1464,6 @@ def run_pipeline(
             )
 
             # ------------------------------------------------
-            # 5a. Freeze consensus
-            # ------------------------------------------------
-
-            frozen_path = (
-                save_frozen_consensus(
-                    image_id,
-                    consensus_results[0],
-                )
-            )
-
-            print()
-            print(
-                "  Frozen consensus saved:"
-            )
-
-            print(
-                f"    {frozen_path}"
-            )
-
-            # ------------------------------------------------
             # 6. Validation
             # ------------------------------------------------
 
@@ -1414,13 +1480,42 @@ def run_pipeline(
             )
 
             # ------------------------------------------------
-            # 7. Deterministic rendering
+            # Freeze only after validation passes
+            # ------------------------------------------------
+
+            if not all(
+                result.get("valid", False)
+                for result in validation_results
+            ):
+
+                raise RuntimeError(
+                    "Consensus CSR validation failed; "
+                    "it will not be frozen."
+                )
+
+            frozen_path = save_frozen_consensus(
+                image_id,
+                consensus_results[0],
+            )
+
+            print()
+            print(
+                "  Validated consensus saved as frozen:"
+            )
+
+            print(
+                f"    {frozen_path}"
+            )
+
+            # ------------------------------------------------
+            # 7. Select one original caption
             # ------------------------------------------------
 
             final_results = (
                 render_consensus_csrs(
                     consensus_results,
                     validation_results,
+                    baseline_records,
                 )
             )
 
@@ -1663,4 +1758,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

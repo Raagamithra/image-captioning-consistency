@@ -1,0 +1,67 @@
+[
+    {
+        "image_id": "test_010",
+        "csr": {
+            "image_id": "test_010",
+            "entities": [
+                {
+                    "id": "e1",
+                    "type": "horse",
+                    "attributes": [
+                        "white"
+                    ]
+                },
+                {
+                    "id": "e2",
+                    "type": "park",
+                    "attributes": []
+                },
+                {
+                    "id": "e3",
+                    "type": "trolley_car",
+                    "attributes": [
+                        "green",
+                        "labeled_'disneyland'",
+                        "red"
+                    ]
+                }
+            ],
+            "actions": [
+                {
+                    "subject": "e1",
+                    "action": "pull",
+                    "object": "e3"
+                }
+            ],
+            "relations": [
+                {
+                    "subject": "e1",
+                    "relation": "through",
+                    "object": "e2"
+                }
+            ],
+            "scene": {
+                "location": "park",
+                "environment": [
+                    "park"
+                ]
+            }
+        },
+        "provenance": {
+            "consensus_policy": {
+                "number_of_runs": 1,
+                "minimum_support": 1,
+                "rule": "strict majority"
+            },
+            "minority_entities": [],
+            "minority_actions": [],
+            "minority_relations": [],
+            "scene": {
+                "location_support": {
+                    "park": 1
+                },
+                "minority_environment": []
+            }
+        }
+    }
+]

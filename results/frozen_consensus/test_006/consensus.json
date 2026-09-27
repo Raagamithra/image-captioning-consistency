@@ -1,0 +1,100 @@
+{
+    "image_id": "test_006",
+    "csr": {
+        "image_id": "test_006",
+        "entities": [
+            {
+                "id": "e1",
+                "type": "cat",
+                "attributes": [
+                    "tabby",
+                    "white_chest"
+                ]
+            },
+            {
+                "id": "e4",
+                "type": "windowsill",
+                "attributes": []
+            }
+        ],
+        "actions": [
+            {
+                "subject": "e1",
+                "action": "sit",
+                "object": null
+            }
+        ],
+        "relations": [
+            {
+                "subject": "e1",
+                "relation": "on",
+                "object": "e4"
+            }
+        ],
+        "scene": {
+            "location": null,
+            "environment": []
+        }
+    },
+    "provenance": {
+        "consensus_policy": {
+            "number_of_runs": 2,
+            "minimum_support": 2,
+            "rule": "strict majority"
+        },
+        "minority_entities": [
+            {
+                "consensus_id": "e2",
+                "support": 1,
+                "runs": [
+                    1
+                ],
+                "type_variants": [
+                    "trees"
+                ],
+                "attribute_support": {
+                    "green": 1
+                }
+            },
+            {
+                "consensus_id": "e3",
+                "support": 1,
+                "runs": [
+                    0
+                ],
+                "type_variants": [
+                    "window"
+                ],
+                "attribute_support": {}
+            }
+        ],
+        "minority_actions": [
+            {
+                "fact": {
+                    "subject": "e1",
+                    "action": "look",
+                    "object": null
+                },
+                "support": 1,
+                "runs": [
+                    0
+                ]
+            }
+        ],
+        "minority_relations": [],
+        "scene": {
+            "location_support": {
+                "windowsill": 1
+            },
+            "minority_environment": [
+                {
+                    "value": "outside",
+                    "support": 1,
+                    "runs": [
+                        1
+                    ]
+                }
+            ]
+        }
+    }
+}

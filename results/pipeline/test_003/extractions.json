@@ -1,10 +1,10 @@
 [
     {
         "image_id": "test_003",
-        "image_file": "test_003.jpg",
+        "image_file": "test_003.jpeg",
         "baseline_run_number": 1,
         "extraction_run_number": 1,
-        "caption": "A man wearing glasses and a white shirt sits at a desk, typing on a laptop while illuminated by a warm desk lamp in a dimly lit room.",
+        "caption": "A small red vintage car is parked on a street next to a curb, with a beige stone building featuring barred windows in the background.",
         "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
         "temperature": 0.0,
         "status": "success",
@@ -13,89 +13,75 @@
             "entities": [
                 {
                     "id": "e1",
-                    "type": "man",
-                    "attributes": []
+                    "type": "car",
+                    "attributes": [
+                        "small",
+                        "red",
+                        "vintage"
+                    ]
                 },
                 {
                     "id": "e2",
-                    "type": "glasses",
+                    "type": "street",
                     "attributes": []
                 },
                 {
                     "id": "e3",
-                    "type": "shirt",
-                    "attributes": [
-                        "white"
-                    ]
+                    "type": "curb",
+                    "attributes": []
                 },
                 {
                     "id": "e4",
-                    "type": "desk",
-                    "attributes": []
-                },
-                {
-                    "id": "e5",
-                    "type": "laptop",
-                    "attributes": []
-                },
-                {
-                    "id": "e6",
-                    "type": "desk lamp",
+                    "type": "building",
                     "attributes": [
-                        "warm"
+                        "beige",
+                        "stone"
                     ]
                 },
                 {
-                    "id": "e7",
-                    "type": "room",
+                    "id": "e5",
+                    "type": "window",
                     "attributes": [
-                        "dimly lit"
+                        "barred"
                     ]
                 }
             ],
             "actions": [
                 {
                     "subject": "e1",
-                    "action": "sit",
+                    "action": "park",
                     "object": null
-                },
-                {
-                    "subject": "e1",
-                    "action": "type",
-                    "object": "e5"
-                },
-                {
-                    "subject": "e6",
-                    "action": "illuminate",
-                    "object": "e1"
                 }
             ],
             "relations": [
                 {
                     "subject": "e1",
-                    "relation": "at",
-                    "object": "e4"
-                },
-                {
-                    "subject": "e1",
-                    "relation": "wearing",
+                    "relation": "on",
                     "object": "e2"
                 },
                 {
                     "subject": "e1",
-                    "relation": "wearing",
+                    "relation": "next_to",
                     "object": "e3"
                 },
                 {
-                    "subject": "e1",
-                    "relation": "in",
-                    "object": "e7"
+                    "subject": "e4",
+                    "relation": "in_background_of",
+                    "object": "e1"
+                },
+                {
+                    "subject": "e4",
+                    "relation": "features",
+                    "object": "e5"
                 }
             ],
             "scene": {
-                "location": "room",
+                "location": "street",
                 "environment": [
-                    "dimly lit"
+                    "outdoor",
+                    "urban",
+                    "curb",
+                    "building"
                 ]
             }
         },
@@ -103,159 +89,162 @@
             "entities": [
                 {
                     "id": "e1",
-                    "type": "desk",
-                    "attributes": []
+                    "type": "building",
+                    "attributes": [
+                        "beige",
+                        "stone"
+                    ]
                 },
                 {
                     "id": "e2",
-                    "type": "desk_lamp",
+                    "type": "car",
                     "attributes": [
-                        "warm"
+                        "red",
+                        "small",
+                        "vintage"
                     ]
                 },
                 {
                     "id": "e3",
-                    "type": "glasses",
+                    "type": "curb",
                     "attributes": []
                 },
                 {
                     "id": "e4",
-                    "type": "laptop",
+                    "type": "street",
                     "attributes": []
                 },
                 {
                     "id": "e5",
-                    "type": "man",
-                    "attributes": []
-                },
-                {
-                    "id": "e6",
-                    "type": "room",
+                    "type": "window",
                     "attributes": [
-                        "dimly_lit"
-                    ]
-                },
-                {
-                    "id": "e7",
-                    "type": "shirt",
-                    "attributes": [
-                        "white"
+                        "barred"
                     ]
                 }
             ],
             "actions": [
                 {
                     "subject": "e2",
-                    "action": "illuminate",
-                    "object": "e5"
-                },
-                {
-                    "subject": "e5",
-                    "action": "sit",
+                    "action": "park",
                     "object": null
-                },
-                {
-                    "subject": "e5",
-                    "action": "type",
-                    "object": "e4"
                 }
             ],
             "relations": [
                 {
-                    "subject": "e5",
-                    "relation": "at",
-                    "object": "e1"
+                    "subject": "e1",
+                    "relation": "features",
+                    "object": "e5"
                 },
                 {
-                    "subject": "e5",
-                    "relation": "in",
-                    "object": "e6"
+                    "subject": "e1",
+                    "relation": "in_background_of",
+                    "object": "e2"
                 },
                 {
-                    "subject": "e5",
-                    "relation": "wearing",
+                    "subject": "e2",
+                    "relation": "next_to",
                     "object": "e3"
                 },
                 {
-                    "subject": "e5",
-                    "relation": "wearing",
-                    "object": "e7"
+                    "subject": "e2",
+                    "relation": "on",
+                    "object": "e4"
                 }
             ],
             "scene": {
-                "location": "room",
+                "location": "street",
                 "environment": [
-                    "dimly_lit"
+                    "building",
+                    "curb",
+                    "outdoor",
+                    "urban"
                 ]
             }
         },
         "extraction_attempts": 1,
-        "raw_extraction_output": "{\n \"entities\": [\n        {\n            \"id\": \"e1\",\n            \"type\": \"man\",\n            \"attributes\": []\n        },\n        {\n            \"id\": \"e2\",\n            \"type\": \"glasses\",\n            \"attributes\": []\n        },\n        {\n            \"id\": \"e3\",\n            \"type\": \"shirt\",\n            \"attributes\": [\"white\"]\n        },\n        {\n            \"id\": \"e4\",\n            \"type\": \"desk\",\n            \"attributes\": []\n        },\n        {\n            \"id\": \"e5\",\n            \"type\": \"laptop\",\n            \"attributes\": []\n        },\n        {\n            \"id\": \"e6\",\n            \"type\": \"desk lamp\",\n            \"attributes\": [\"warm\"]\n        },\n        {\n            \"id\": \"e7\",\n            \"type\": \"room\",\n            \"attributes\": [\"dimly lit\"]\n        }\n    ],\n    \"actions\": [\n        {\n            \"subject\": \"e1\",\n            \"action\": \"sit\",\n            \"object\": null\n        },\n        {\n            \"subject\": \"e1\",\n            \"action\": \"type\",\n            \"object\": \"e5\"\n        },\n        {\n            \"subject\": \"e6\",\n            \"action\": \"illuminate\",\n            \"object\": \"e1\"\n        }\n    ],\n    \"relations\": [\n        {\n            \"subject\": \"e1\",\n            \"relation\": \"at\",\n            \"object\": \"e4\"\n        },\n        {\n            \"subject\": \"e1\",\n            \"relation\": \"wearing\",\n            \"object\": \"e2\"\n        },\n        {\n            \"subject\": \"e1\",\n            \"relation\": \"wearing\",\n            \"object\": \"e3\"\n        },\n        {\n            \"subject\": \"e1\",\n            \"relation\": \"in\",\n            \"object\": \"e7\"\n        }\n    ],\n    \"scene\": {\n        \"location\": \"room\",\n        \"environment\": [\"dimly lit\"]\n    }\n}"
+        "raw_extraction_output": "{\n    \"entities\": [\n        {\n            \"id\": \"e1\",\n            \"type\": \"car\",\n            \"attributes\": [\"small\", \"red\", \"vintage\"]\n        },\n        {\n            \"id\": \"e2\",\n            \"type\": \"street\",\n            \"attributes\": []\n        },\n        {\n            \"id\": \"e3\",\n            \"type\": \"curb\",\n            \"attributes\": []\n        },\n        {\n            \"id\": \"e4\",\n            \"type\": \"building\",\n            \"attributes\": [\"beige\", \"stone\"]\n        },\n        {\n            \"id\": \"e5\",\n            \"type\": \"window\",\n            \"attributes\": [\"barred\"]\n        }\n    ],\n    \"actions\": [\n        {\n            \"subject\": \"e1\",\n            \"action\": \"park\",\n            \"object\": null\n        }\n    ],\n    \"relations\": [\n        {\n            \"subject\": \"e1\",\n            \"relation\": \"on\",\n            \"object\": \"e2\"\n        },\n        {\n            \"subject\": \"e1\",\n            \"relation\": \"next_to\",\n            \"object\": \"e3\"\n        },\n        {\n            \"subject\": \"e4\",\n            \"relation\": \"in_background_of\",\n            \"object\": \"e1\"\n        },\n        {\n            \"subject\": \"e4\",\n            \"relation\": \"features\",\n            \"object\": \"e5\"\n        }\n    ],\n    \"scene\": {\n        \"location\": \"street\",\n        \"environment\": [\"outdoor\", \"urban\", \"curb\", \"building\"]\n    }\n}"
     },
     {
         "image_id": "test_003",
-        "image_file": "test_003.jpg",
+        "image_file": "test_003.jpeg",
         "baseline_run_number": 2,
         "extraction_run_number": 2,
-        "caption": "A bearded man wearing glasses sits at a desk, typing on a laptop under the warm light of a desk lamp.",
+        "caption": "A bright red vintage compact car is parked on the street in front of a beige stone building featuring two barred windows.",
         "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
         "temperature": 0.0,
         "status": "success",
-        "attempts": 1,
+        "attempts": 2,
         "original_csr": {
             "entities": [
                 {
                     "id": "e1",
-                    "type": "man",
+                    "type": "car",
                     "attributes": [
-                        "bearded",
-                        "wearing glasses"
+                        "bright",
+                        "red",
+                        "vintage",
+                        "compact"
                     ]
                 },
                 {
                     "id": "e2",
-                    "type": "desk",
+                    "type": "street",
                     "attributes": []
                 },
                 {
                     "id": "e3",
-                    "type": "laptop",
-                    "attributes": []
+                    "type": "building",
+                    "attributes": [
+                        "beige",
+                        "stone"
+                    ]
                 },
                 {
                     "id": "e4",
-                    "type": "desk lamp",
+                    "type": "window",
                     "attributes": [
-                        "warm light"
+                        "barred"
+                    ]
+                },
+                {
+                    "id": "e5",
+                    "type": "window",
+                    "attributes": [
+                        "barred"
                     ]
                 }
             ],
             "actions": [
                 {
                     "subject": "e1",
-                    "action": "sit",
+                    "action": "park",
                     "object": null
-                },
-                {
-                    "subject": "e1",
-                    "action": "type",
-                    "object": "e3"
                 }
             ],
             "relations": [
                 {
                     "subject": "e1",
-                    "relation": "at",
+                    "relation": "on",
                     "object": "e2"
                 },
                 {
                     "subject": "e1",
-                    "relation": "under",
+                    "relation": "in_front_of",
+                    "object": "e3"
+                },
+                {
+                    "subject": "e3",
+                    "relation": "features",
                     "object": "e4"
+                },
+                {
+                    "subject": "e3",
+                    "relation": "features",
+                    "object": "e5"
                 }
             ],
             "scene": {
-                "location": null,
+                "location": "street",
                 "environment": []
             }
         },
@@ -263,189 +252,70 @@
             "entities": [
                 {
                     "id": "e1",
-                    "type": "desk",
-                    "attributes": []
+                    "type": "building",
+                    "attributes": [
+                        "beige",
+                        "stone"
+                    ]
                 },
                 {
                     "id": "e2",
-                    "type": "desk_lamp",
+                    "type": "car",
                     "attributes": [
-                        "warm_light"
+                        "bright",
+                        "compact",
+                        "red",
+                        "vintage"
                     ]
                 },
                 {
                     "id": "e3",
-                    "type": "laptop",
+                    "type": "street",
                     "attributes": []
                 },
                 {
                     "id": "e4",
-                    "type": "man",
+                    "type": "window",
                     "attributes": [
-                        "bearded",
-                        "wearing_glasses"
+                        "barred"
                     ]
                 }
             ],
             "actions": [
                 {
-                    "subject": "e4",
-                    "action": "sit",
+                    "subject": "e2",
+                    "action": "park",
                     "object": null
-                },
-                {
-                    "subject": "e4",
-                    "action": "type",
-                    "object": "e3"
-                }
-            ],
-            "relations": [
-                {
-                    "subject": "e4",
-                    "relation": "at",
-                    "object": "e1"
-                },
-                {
-                    "subject": "e4",
-                    "relation": "under",
-                    "object": "e2"
-                }
-            ],
-            "scene": {
-                "location": null,
-                "environment": []
-            }
-        },
-        "extraction_attempts": 1,
-        "raw_extraction_output": "{\n \"entities\": [\n        {\n            \"id\": \"e1\",\n            \"type\": \"man\",\n            \"attributes\": [\"bearded\", \"wearing glasses\"]\n        },\n        {\n            \"id\": \"e2\",\n            \"type\": \"desk\",\n            \"attributes\": []\n        },\n        {\n            \"id\": \"e3\",\n            \"type\": \"laptop\",\n            \"attributes\": []\n        },\n        {\n            \"id\": \"e4\",\n            \"type\": \"desk lamp\",\n            \"attributes\": [\"warm light\"]\n        }\n    ],\n    \"actions\": [\n        {\n            \"subject\": \"e1\",\n            \"action\": \"sit\",\n            \"object\": null\n        },\n        {\n            \"subject\": \"e1\",\n            \"action\": \"type\",\n            \"object\": \"e3\"\n        }\n    ],\n    \"relations\": [\n        {\n            \"subject\": \"e1\",\n            \"relation\": \"at\",\n            \"object\": \"e2\"\n        },\n        {\n            \"subject\": \"e1\",\n            \"relation\": \"under\",\n            \"object\": \"e4\"\n        }\n    ],\n    \"scene\": {\n        \"location\": null,\n        \"environment\": []\n    }\n}"
-    },
-    {
-        "image_id": "test_003",
-        "image_file": "test_003.jpg",
-        "baseline_run_number": 3,
-        "extraction_run_number": 3,
-        "caption": "A man with glasses and a beard, wearing a white shirt, sits at a desk typing on a laptop under the warm glow of a desk lamp.",
-        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
-        "temperature": 0.0,
-        "status": "success",
-        "attempts": 1,
-        "original_csr": {
-            "entities": [
-                {
-                    "id": "e1",
-                    "type": "man",
-                    "attributes": [
-                        "glasses",
-                        "beard",
-                        "white shirt"
-                    ]
-                },
-                {
-                    "id": "e2",
-                    "type": "desk",
-                    "attributes": []
-                },
-                {
-                    "id": "e3",
-                    "type": "laptop",
-                    "attributes": []
-                },
-                {
-                    "id": "e4",
-                    "type": "desk lamp",
-                    "attributes": [
-                        "warm glow"
-                    ]
-                }
-            ],
-            "actions": [
-                {
-                    "subject": "e1",
-                    "action": "sit",
-                    "object": null
-                },
-                {
-                    "subject": "e1",
-                    "action": "type",
-                    "object": "e3"
                 }
             ],
             "relations": [
                 {
                     "subject": "e1",
-                    "relation": "at",
-                    "object": "e2"
-                },
-                {
-                    "subject": "e1",
-                    "relation": "under",
+                    "relation": "features",
                     "object": "e4"
-                }
-            ],
-            "scene": {
-                "location": null,
-                "environment": []
-            }
-        },
-        "csr": {
-            "entities": [
-                {
-                    "id": "e1",
-                    "type": "desk",
-                    "attributes": []
                 },
                 {
-                    "id": "e2",
-                    "type": "desk_lamp",
-                    "attributes": [
-                        "warm_glow"
-                    ]
+                    "subject": "e1",
+                    "relation": "features",
+                    "object": "e5"
                 },
                 {
-                    "id": "e3",
-                    "type": "laptop",
-                    "attributes": []
-                },
-                {
-                    "id": "e4",
-                    "type": "man",
-                    "attributes": [
-                        "beard",
-                        "glasses",
-                        "white_shirt"
-                    ]
-                }
-            ],
-            "actions": [
-                {
-                    "subject": "e4",
-                    "action": "sit",
-                    "object": null
-                },
-                {
-                    "subject": "e4",
-                    "action": "type",
-                    "object": "e3"
-                }
-            ],
-            "relations": [
-                {
-                    "subject": "e4",
-                    "relation": "at",
+                    "subject": "e2",
+                    "relation": "in_front_of",
                     "object": "e1"
                 },
                 {
-                    "subject": "e4",
-                    "relation": "under",
-                    "object": "e2"
+                    "subject": "e2",
+                    "relation": "on",
+                    "object": "e3"
                 }
             ],
             "scene": {
-                "location": null,
+                "location": "street",
                 "environment": []
             }
         },
         "extraction_attempts": 1,
-        "raw_extraction_output": "{\n    \"entities\": [\n        {\n            \"id\": \"e1\",\n            \"type\": \"man\",\n            \"attributes\": [\"glasses\", \"beard\", \"white shirt\"]\n        },\n        {\n            \"id\": \"e2\",\n            \"type\": \"desk\",\n            \"attributes\": []\n        },\n        {\n            \"id\": \"e3\",\n            \"type\": \"laptop\",\n            \"attributes\": []\n        },\n        {\n            \"id\": \"e4\",\n            \"type\": \"desk lamp\",\n            \"attributes\": [\"warm glow\"]\n        }\n    ],\n    \"actions\": [\n        {\n            \"subject\": \"e1\",\n            \"action\": \"sit\",\n            \"object\": null\n        },\n        {\n            \"subject\": \"e1\",\n            \"action\": \"type\",\n            \"object\": \"e3\"\n        }\n    ],\n    \"relations\": [\n        {\n            \"subject\": \"e1\",\n            \"relation\": \"at\",\n            \"object\": \"e2\"\n        },\n        {\n            \"subject\": \"e1\",\n            \"relation\": \"under\",\n            \"object\": \"e4\"\n        }\n    ],\n    \"scene\": {\n        \"location\": null,\n        \"environment\": []\n    }\n}"
+        "raw_extraction_output": "{\n \"entities\": [\n        {\n            \"id\": \"e1\",\n            \"type\": \"car\",\n            \"attributes\": [\"bright\", \"red\", \"vintage\", \"compact\"]\n        },\n        {\n            \"id\": \"e2\",\n            \"type\": \"street\",\n            \"attributes\": []\n        },\n        {\n            \"id\": \"e3\",\n            \"type\": \"building\",\n            \"attributes\": [\"beige\", \"stone\"]\n        },\n        {\n            \"id\": \"e4\",\n            \"type\": \"window\",\n            \"attributes\": [\"barred\"]\n        },\n        {\n            \"id\": \"e5\",\n            \"type\": \"window\",\n            \"attributes\": [\"barred\"]\n        }\n    ],\n    \"actions\": [\n        {\n            \"subject\": \"e1\",\n            \"action\": \"park\",\n            \"object\": null\n        }\n    ],\n    \"relations\": [\n        {\n            \"subject\": \"e1\",\n            \"relation\": \"on\",\n            \"object\": \"e2\"\n        },\n        {\n            \"subject\": \"e1\",\n            \"relation\": \"in_front_of\",\n            \"object\": \"e3\"\n        },\n        {\n            \"subject\": \"e3\",\n            \"relation\": \"features\",\n            \"object\": \"e4\"\n        },\n        {\n            \"subject\": \"e3\",\n            \"relation\": \"features\",\n            \"object\": \"e5\"\n        }\n    ],\n    \"scene\": {\n        \"location\": \"street\",\n        \"environment\": []\n    }\n}"
     }
 ]

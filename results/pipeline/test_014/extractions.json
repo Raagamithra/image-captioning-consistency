@@ -1,0 +1,147 @@
+[
+    {
+        "image_id": "test_014",
+        "image_file": "test_014.jpg",
+        "baseline_run_number": 1,
+        "extraction_run_number": 1,
+        "caption": "A bronze statue of two children flying a colorful kite stands on a pedestal in front of a tall, glass-windowed building.",
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+        "temperature": 0.0,
+        "status": "success",
+        "attempts": 1,
+        "original_csr": {
+            "entities": [
+                {
+                    "id": "e1",
+                    "type": "statue",
+                    "attributes": [
+                        "bronze"
+                    ]
+                },
+                {
+                    "id": "e2",
+                    "type": "child",
+                    "attributes": [
+                        "two"
+                    ]
+                },
+                {
+                    "id": "e3",
+                    "type": "kite",
+                    "attributes": [
+                        "colorful"
+                    ]
+                },
+                {
+                    "id": "e4",
+                    "type": "pedestal",
+                    "attributes": []
+                },
+                {
+                    "id": "e5",
+                    "type": "building",
+                    "attributes": [
+                        "tall",
+                        "glass-windowed"
+                    ]
+                }
+            ],
+            "actions": [
+                {
+                    "subject": "e1",
+                    "action": "stand",
+                    "object": null
+                },
+                {
+                    "subject": "e2",
+                    "action": "fly",
+                    "object": "e3"
+                }
+            ],
+            "relations": [
+                {
+                    "subject": "e1",
+                    "relation": "on",
+                    "object": "e4"
+                },
+                {
+                    "subject": "e1",
+                    "relation": "in_front_of",
+                    "object": "e5"
+                }
+            ],
+            "scene": {
+                "location": null,
+                "environment": []
+            }
+        },
+        "csr": {
+            "entities": [
+                {
+                    "id": "e1",
+                    "type": "building",
+                    "attributes": [
+                        "glass_windowed",
+                        "tall"
+                    ]
+                },
+                {
+                    "id": "e2",
+                    "type": "child",
+                    "attributes": [
+                        "two"
+                    ]
+                },
+                {
+                    "id": "e3",
+                    "type": "kite",
+                    "attributes": [
+                        "colorful"
+                    ]
+                },
+                {
+                    "id": "e4",
+                    "type": "pedestal",
+                    "attributes": []
+                },
+                {
+                    "id": "e5",
+                    "type": "statue",
+                    "attributes": [
+                        "bronze"
+                    ]
+                }
+            ],
+            "actions": [
+                {
+                    "subject": "e2",
+                    "action": "fly",
+                    "object": "e3"
+                },
+                {
+                    "subject": "e5",
+                    "action": "stand",
+                    "object": null
+                }
+            ],
+            "relations": [
+                {
+                    "subject": "e5",
+                    "relation": "in_front_of",
+                    "object": "e1"
+                },
+                {
+                    "subject": "e5",
+                    "relation": "on",
+                    "object": "e4"
+                }
+            ],
+            "scene": {
+                "location": null,
+                "environment": []
+            }
+        },
+        "extraction_attempts": 1,
+        "raw_extraction_output": "{\n    \"entities\": [\n        {\n            \"id\": \"e1\",\n            \"type\": \"statue\",\n            \"attributes\": [\"bronze\"]\n        },\n        {\n            \"id\": \"e2\",\n            \"type\": \"child\",\n            \"attributes\": [\"two\"]\n        },\n        {\n            \"id\": \"e3\",\n            \"type\": \"kite\",\n            \"attributes\": [\"colorful\"]\n        },\n        {\n            \"id\": \"e4\",\n            \"type\": \"pedestal\",\n            \"attributes\": []\n        },\n        {\n            \"id\": \"e5\",\n            \"type\": \"building\",\n            \"attributes\": [\"tall\", \"glass-windowed\"]\n        }\n    ],\n    \"actions\": [\n        {\n            \"subject\": \"e1\",\n            \"action\": \"stand\",\n            \"object\": null\n        },\n        {\n            \"subject\": \"e2\",\n            \"action\": \"fly\",\n            \"object\": \"e3\"\n        }\n    ],\n    \"relations\": [\n        {\n            \"subject\": \"e1\",\n            \"relation\": \"on\",\n            \"object\": \"e4\"\n        },\n        {\n            \"subject\": \"e1\",\n            \"relation\": \"in_front_of\",\n            \"object\": \"e5\"\n        }\n    ],\n    \"scene\": {\n        \"location\": null,\n        \"environment\": []\n    }\n}"
+    }
+]

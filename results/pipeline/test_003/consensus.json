@@ -3,64 +3,49 @@
         "image_id": "test_003",
         "csr": {
             "image_id": "test_003",
-            "entities": [
-                {
-                    "id": "e1",
-                    "type": "desk",
-                    "attributes": []
-                },
-                {
-                    "id": "e2",
-                    "type": "desk_lamp",
-                    "attributes": []
-                },
-                {
-                    "id": "e4",
-                    "type": "laptop",
-                    "attributes": []
-                },
-                {
-                    "id": "e5",
-                    "type": "man",
-                    "attributes": []
-                }
-            ],
-            "actions": [
-                {
-                    "subject": "e5",
-                    "action": "sit",
-                    "object": null
-                },
-                {
-                    "subject": "e5",
-                    "action": "type",
-                    "object": "e4"
-                }
-            ],
-            "relations": [
-                {
-                    "subject": "e5",
-                    "relation": "at",
-                    "object": "e1"
-                },
-                {
-                    "subject": "e5",
-                    "relation": "under",
-                    "object": "e2"
-                }
-            ],
+            "entities": [],
+            "actions": [],
+            "relations": [],
             "scene": {
-                "location": null,
+                "location": "street",
                 "environment": []
             }
         },
         "provenance": {
             "consensus_policy": {
-                "number_of_runs": 3,
+                "number_of_runs": 2,
                 "minimum_support": 2,
                 "rule": "strict majority"
             },
             "minority_entities": [
+                {
+                    "consensus_id": "e1",
+                    "support": 1,
+                    "runs": [
+                        0
+                    ],
+                    "type_variants": [
+                        "building"
+                    ],
+                    "attribute_support": {
+                        "stone": 1,
+                        "beige": 1
+                    }
+                },
+                {
+                    "consensus_id": "e2",
+                    "support": 1,
+                    "runs": [
+                        1
+                    ],
+                    "type_variants": [
+                        "building"
+                    ],
+                    "attribute_support": {
+                        "stone": 1,
+                        "beige": 1
+                    }
+                },
                 {
                     "consensus_id": "e3",
                     "support": 1,
@@ -68,7 +53,38 @@
                         0
                     ],
                     "type_variants": [
-                        "glasses"
+                        "car"
+                    ],
+                    "attribute_support": {
+                        "vintage": 1,
+                        "red": 1,
+                        "small": 1
+                    }
+                },
+                {
+                    "consensus_id": "e4",
+                    "support": 1,
+                    "runs": [
+                        1
+                    ],
+                    "type_variants": [
+                        "car"
+                    ],
+                    "attribute_support": {
+                        "bright": 1,
+                        "red": 1,
+                        "vintage": 1,
+                        "compact": 1
+                    }
+                },
+                {
+                    "consensus_id": "e5",
+                    "support": 1,
+                    "runs": [
+                        0
+                    ],
+                    "type_variants": [
+                        "curb"
                     ],
                     "attribute_support": {}
                 },
@@ -79,47 +95,78 @@
                         0
                     ],
                     "type_variants": [
-                        "room"
+                        "street"
                     ],
-                    "attribute_support": {
-                        "dimly_lit": 1
-                    }
+                    "attribute_support": {}
                 },
                 {
                     "consensus_id": "e7",
                     "support": 1,
                     "runs": [
-                        0
+                        1
                     ],
                     "type_variants": [
-                        "shirt"
+                        "street"
                     ],
-                    "attribute_support": {
-                        "white": 1
-                    }
-                }
-            ],
-            "minority_actions": [
+                    "attribute_support": {}
+                },
                 {
-                    "fact": {
-                        "subject": "e2",
-                        "action": "illuminate",
-                        "object": "e5"
-                    },
+                    "consensus_id": "e8",
                     "support": 1,
                     "runs": [
                         0
-                    ]
+                    ],
+                    "type_variants": [
+                        "window"
+                    ],
+                    "attribute_support": {
+                        "barred": 1
+                    }
+                },
+                {
+                    "consensus_id": "e9",
+                    "support": 1,
+                    "runs": [
+                        1
+                    ],
+                    "type_variants": [
+                        "window"
+                    ],
+                    "attribute_support": {
+                        "barred": 1
+                    }
                 }
             ],
+            "minority_actions": [],
             "minority_relations": [],
             "scene": {
                 "location_support": {
-                    "room": 1
+                    "street": 2
                 },
                 "minority_environment": [
                     {
-                        "value": "dimly_lit",
+                        "value": "building",
+                        "support": 1,
+                        "runs": [
+                            0
+                        ]
+                    },
+                    {
+                        "value": "curb",
+                        "support": 1,
+                        "runs": [
+                            0
+                        ]
+                    },
+                    {
+                        "value": "outdoor",
+                        "support": 1,
+                        "runs": [
+                            0
+                        ]
+                    },
+                    {
+                        "value": "urban",
                         "support": 1,
                         "runs": [
                             0

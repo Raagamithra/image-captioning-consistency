@@ -1,0 +1,13 @@
+[
+    {
+        "image_id": "test_009",
+        "image_file": "test_009.jpg",
+        "baseline_run_number": 1,
+        "extraction_run_number": 1,
+        "caption": "A tennis match is in progress on a blue court between R. Ivanovic and R. Mauresmo, with a player in purple hitting the ball while her opponent in red waits at the baseline.",
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+        "temperature": 0.0,
+        "status": "success",
+        "attempts": 1
+    }
+]

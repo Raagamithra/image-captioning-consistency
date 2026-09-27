@@ -1,0 +1,176 @@
+[
+    {
+        "image_id": "test_008",
+        "image_file": "test_008.jpg",
+        "baseline_run_number": 1,
+        "extraction_run_number": 1,
+        "caption": "Two young girls are standing in a grassy area, with one petting a black goat and the other smiling beside a white goat.",
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+        "temperature": 0.0,
+        "status": "success",
+        "attempts": 1,
+        "original_csr": {
+            "entities": [
+                {
+                    "id": "e1",
+                    "type": "girl",
+                    "attributes": [
+                        "young"
+                    ]
+                },
+                {
+                    "id": "e2",
+                    "type": "girl",
+                    "attributes": [
+                        "young"
+                    ]
+                },
+                {
+                    "id": "e3",
+                    "type": "area",
+                    "attributes": [
+                        "grassy"
+                    ]
+                },
+                {
+                    "id": "e4",
+                    "type": "goat",
+                    "attributes": [
+                        "black"
+                    ]
+                },
+                {
+                    "id": "e5",
+                    "type": "goat",
+                    "attributes": [
+                        "white"
+                    ]
+                }
+            ],
+            "actions": [
+                {
+                    "subject": "e1",
+                    "action": "stand",
+                    "object": null
+                },
+                {
+                    "subject": "e2",
+                    "action": "stand",
+                    "object": null
+                },
+                {
+                    "subject": "e1",
+                    "action": "pet",
+                    "object": "e4"
+                },
+                {
+                    "subject": "e2",
+                    "action": "smile",
+                    "object": null
+                }
+            ],
+            "relations": [
+                {
+                    "subject": "e1",
+                    "relation": "in",
+                    "object": "e3"
+                },
+                {
+                    "subject": "e2",
+                    "relation": "in",
+                    "object": "e3"
+                },
+                {
+                    "subject": "e2",
+                    "relation": "beside",
+                    "object": "e5"
+                }
+            ],
+            "scene": {
+                "location": "grassy area",
+                "environment": [
+                    "grassy"
+                ]
+            }
+        },
+        "csr": {
+            "entities": [
+                {
+                    "id": "e1",
+                    "type": "area",
+                    "attributes": [
+                        "grassy"
+                    ]
+                },
+                {
+                    "id": "e2",
+                    "type": "girl",
+                    "attributes": [
+                        "young"
+                    ]
+                },
+                {
+                    "id": "e3",
+                    "type": "goat",
+                    "attributes": [
+                        "black"
+                    ]
+                },
+                {
+                    "id": "e4",
+                    "type": "goat",
+                    "attributes": [
+                        "white"
+                    ]
+                }
+            ],
+            "actions": [
+                {
+                    "subject": "e2",
+                    "action": "pet",
+                    "object": "e3"
+                },
+                {
+                    "subject": "e2",
+                    "action": "smile",
+                    "object": null
+                },
+                {
+                    "subject": "e2",
+                    "action": "stand",
+                    "object": null
+                },
+                {
+                    "subject": "e2",
+                    "action": "stand",
+                    "object": null
+                }
+            ],
+            "relations": [
+                {
+                    "subject": "e2",
+                    "relation": "beside",
+                    "object": "e4"
+                },
+                {
+                    "subject": "e2",
+                    "relation": "in",
+                    "object": "e1"
+                },
+                {
+                    "subject": "e2",
+                    "relation": "in",
+                    "object": "e1"
+                }
+            ],
+            "scene": {
+                "location": "grassy_area",
+                "environment": [
+                    "grassy"
+                ]
+            }
+        },
+        "extraction_attempts": 1,
+        "raw_extraction_output": "{\n    \"entities\": [\n        {\n            \"id\": \"e1\",\n            \"type\": \"girl\",\n            \"attributes\": [\"young\"]\n        },\n        {\n            \"id\": \"e2\",\n            \"type\": \"girl\",\n            \"attributes\": [\"young\"]\n        },\n        {\n            \"id\": \"e3\",\n            \"type\": \"area\",\n            \"attributes\": [\"grassy\"]\n        },\n        {\n            \"id\": \"e4\",\n            \"type\": \"goat\",\n            \"attributes\": [\"black\"]\n        },\n        {\n            \"id\": \"e5\",\n            \"type\": \"goat\",\n            \"attributes\": [\"white\"]\n        }\n    ],\n    \"actions\": [\n        {\n            \"subject\": \"e1\",\n            \"action\": \"stand\",\n            \"object\": null\n        },\n        {\n            \"subject\": \"e2\",\n            \"action\": \"stand\",\n            \"object\": null\n        },\n        {\n            \"subject\": \"e1\",\n            \"action\": \"pet\",\n            \"object\": \"e4\"\n        },\n        {\n            \"subject\": \"e2\",\n            \"action\": \"smile\",\n            \"object\": null\n        }\n    ],\n    \"relations\": [\n        {\n            \"subject\": \"e1\",\n            \"relation\": \"in\",\n            \"object\": \"e3\"\n        },\n        {\n            \"subject\": \"e2\",\n            \"relation\": \"in\",\n            \"object\": \"e3\"\n        },\n        {\n            \"subject\": \"e2\",\n            \"relation\": \"beside\",\n            \"object\": \"e5\"\n        }\n    ],\n    \"scene\": {\n        \"location\": \"grassy area\",\n        \"environment\": [\"grassy\"]\n    }\n}"
+    }
+]

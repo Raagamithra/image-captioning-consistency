@@ -1,0 +1,226 @@
+[
+    {
+        "image_id": "test_006",
+        "image_file": "test_006.jpg",
+        "baseline_run_number": 1,
+        "extraction_run_number": 1,
+        "caption": "A tabby cat with a white chest sits on a windowsill looking out the window.",
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+        "temperature": 0.0,
+        "status": "success",
+        "attempts": 2,
+        "original_csr": {
+            "entities": [
+                {
+                    "id": "e1",
+                    "type": "cat",
+                    "attributes": [
+                        "tabby",
+                        "white chest"
+                    ]
+                },
+                {
+                    "id": "e2",
+                    "type": "windowsill",
+                    "attributes": []
+                },
+                {
+                    "id": "e3",
+                    "type": "window",
+                    "attributes": []
+                }
+            ],
+            "actions": [
+                {
+                    "subject": "e1",
+                    "action": "sit",
+                    "object": null
+                },
+                {
+                    "subject": "e1",
+                    "action": "look",
+                    "object": null
+                }
+            ],
+            "relations": [
+                {
+                    "subject": "e1",
+                    "relation": "on",
+                    "object": "e2"
+                },
+                {
+                    "subject": "e1",
+                    "relation": "out_of",
+                    "object": "e3"
+                }
+            ],
+            "scene": {
+                "location": null,
+                "environment": []
+            }
+        },
+        "csr": {
+            "entities": [
+                {
+                    "id": "e1",
+                    "type": "cat",
+                    "attributes": [
+                        "tabby",
+                        "white_chest"
+                    ]
+                },
+                {
+                    "id": "e2",
+                    "type": "window",
+                    "attributes": []
+                },
+                {
+                    "id": "e3",
+                    "type": "windowsill",
+                    "attributes": []
+                }
+            ],
+            "actions": [
+                {
+                    "subject": "e1",
+                    "action": "look",
+                    "object": null
+                },
+                {
+                    "subject": "e1",
+                    "action": "sit",
+                    "object": null
+                }
+            ],
+            "relations": [
+                {
+                    "subject": "e1",
+                    "relation": "on",
+                    "object": "e3"
+                },
+                {
+                    "subject": "e1",
+                    "relation": "out_of",
+                    "object": "e2"
+                }
+            ],
+            "scene": {
+                "location": null,
+                "environment": []
+            }
+        },
+        "extraction_attempts": 1,
+        "raw_extraction_output": "{\n    \"entities\": [\n        {\n            \"id\": \"e1\",\n            \"type\": \"cat\",\n            \"attributes\": [\"tabby\", \"white chest\"]\n        },\n        {\n            \"id\": \"e2\",\n            \"type\": \"windowsill\",\n            \"attributes\": []\n        },\n        {\n            \"id\": \"e3\",\n            \"type\": \"window\",\n            \"attributes\": []\n        }\n    ],\n    \"actions\": [\n        {\n            \"subject\": \"e1\",\n            \"action\": \"sit\",\n            \"object\": null\n        },\n        {\n            \"subject\": \"e1\",\n            \"action\": \"look\",\n            \"object\": null\n        }\n    ],\n    \"relations\": [\n        {\n            \"subject\": \"e1\",\n            \"relation\": \"on\",\n            \"object\": \"e2\"\n        },\n        {\n            \"subject\": \"e1\",\n            \"relation\": \"out_of\",\n            \"object\": \"e3\"\n        }\n    ],\n    \"scene\": {\n        \"location\": null,\n        \"environment\": []\n    }\n}"
+    },
+    {
+        "image_id": "test_006",
+        "image_file": "test_006.jpg",
+        "baseline_run_number": 2,
+        "extraction_run_number": 2,
+        "caption": "A tabby cat with a white chest sits on a windowsill looking out at the green trees outside.",
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+        "temperature": 0.0,
+        "status": "success",
+        "attempts": 1,
+        "original_csr": {
+            "entities": [
+                {
+                    "id": "e1",
+                    "type": "cat",
+                    "attributes": [
+                        "tabby",
+                        "white chest"
+                    ]
+                },
+                {
+                    "id": "e2",
+                    "type": "windowsill",
+                    "attributes": []
+                },
+                {
+                    "id": "e3",
+                    "type": "trees",
+                    "attributes": [
+                        "green"
+                    ]
+                }
+            ],
+            "actions": [
+                {
+                    "subject": "e1",
+                    "action": "sit",
+                    "object": null
+                },
+                {
+                    "subject": "e1",
+                    "action": "look",
+                    "object": "e3"
+                }
+            ],
+            "relations": [
+                {
+                    "subject": "e1",
+                    "relation": "on",
+                    "object": "e2"
+                }
+            ],
+            "scene": {
+                "location": "windowsill",
+                "environment": [
+                    "outside"
+                ]
+            }
+        },
+        "csr": {
+            "entities": [
+                {
+                    "id": "e1",
+                    "type": "cat",
+                    "attributes": [
+                        "tabby",
+                        "white_chest"
+                    ]
+                },
+                {
+                    "id": "e2",
+                    "type": "trees",
+                    "attributes": [
+                        "green"
+                    ]
+                },
+                {
+                    "id": "e3",
+                    "type": "windowsill",
+                    "attributes": []
+                }
+            ],
+            "actions": [
+                {
+                    "subject": "e1",
+                    "action": "look",
+                    "object": "e2"
+                },
+                {
+                    "subject": "e1",
+                    "action": "sit",
+                    "object": null
+                }
+            ],
+            "relations": [
+                {
+                    "subject": "e1",
+                    "relation": "on",
+                    "object": "e3"
+                }
+            ],
+            "scene": {
+                "location": "windowsill",
+                "environment": [
+                    "outside"
+                ]
+            }
+        },
+        "extraction_attempts": 1,
+        "raw_extraction_output": "{\n    \"entities\": [\n        {\n            \"id\": \"e1\",\n            \"type\": \"cat\",\n            \"attributes\": [\"tabby\", \"white chest\"]\n        },\n        {\n            \"id\": \"e2\",\n            \"type\": \"windowsill\",\n            \"attributes\": []\n        },\n        {\n            \"id\": \"e3\",\n            \"type\": \"trees\",\n            \"attributes\": [\"green\"]\n        }\n    ],\n    \"actions\": [\n        {\n            \"subject\": \"e1\",\n            \"action\": \"sit\",\n            \"object\": null\n        },\n        {\n            \"subject\": \"e1\",\n            \"action\": \"look\",\n            \"object\": \"e3\"\n        }\n    ],\n    \"relations\": [\n        {\n            \"subject\": \"e1\",\n            \"relation\": \"on\",\n            \"object\": \"e2\"\n        }\n    ],\n    \"scene\": {\n        \"location\": \"windowsill\",\n        \"environment\": [\"outside\"]\n    }\n}"
+    }
+]

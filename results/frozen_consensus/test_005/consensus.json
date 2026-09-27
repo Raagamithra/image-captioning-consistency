@@ -4,199 +4,98 @@
         "image_id": "test_005",
         "entities": [
             {
-                "id": "e2",
-                "type": "classroom",
+                "id": "e1",
+                "type": "clouds",
                 "attributes": [
-                    "bright"
+                    "white",
+                    "wispy"
+                ]
+            },
+            {
+                "id": "e2",
+                "type": "mountain_ridge",
+                "attributes": [
+                    "green",
+                    "lush"
                 ]
             },
             {
                 "id": "e3",
-                "type": "floor",
-                "attributes": []
-            },
-            {
-                "id": "e4",
-                "type": "group",
+                "type": "sky",
                 "attributes": [
-                    "diverse",
-                    "young"
-                ]
-            },
-            {
-                "id": "e7",
-                "type": "teacher",
-                "attributes": [
-                    "female"
-                ]
-            },
-            {
-                "id": "e8",
-                "type": "toy",
-                "attributes": [
-                    "wooden"
+                    "blue"
                 ]
             }
         ],
         "actions": [
             {
-                "subject": "e7",
-                "action": "sit",
+                "subject": "e2",
+                "action": "rise",
                 "object": null
             }
         ],
         "relations": [
             {
-                "subject": "e4",
-                "relation": "in",
-                "object": "e2"
-            },
-            {
-                "subject": "e7",
-                "relation": "in",
-                "object": "e2"
-            },
-            {
-                "subject": "e7",
-                "relation": "on",
+                "subject": "e2",
+                "relation": "under",
                 "object": "e3"
+            },
+            {
+                "subject": "e3",
+                "relation": "filled_with",
+                "object": "e1"
             }
         ],
         "scene": {
-            "location": "classroom",
-            "environment": [
-                "bright"
-            ]
+            "location": null,
+            "environment": []
         }
     },
     "provenance": {
         "consensus_policy": {
-            "number_of_runs": 3,
+            "number_of_runs": 2,
             "minimum_support": 2,
             "rule": "strict majority"
         },
-        "minority_entities": [
-            {
-                "consensus_id": "e1",
-                "support": 1,
-                "runs": [
-                    2
-                ],
-                "type_variants": [
-                    "activity"
-                ],
-                "attribute_support": {
-                    "hands_on": 1,
-                    "learning": 1,
-                    "various": 1
-                }
-            },
-            {
-                "consensus_id": "e5",
-                "support": 1,
-                "runs": [
-                    1
-                ],
-                "type_variants": [
-                    "material"
-                ],
-                "attribute_support": {
-                    "wooden": 1,
-                    "educational": 1
-                }
-            },
-            {
-                "consensus_id": "e6",
-                "support": 1,
-                "runs": [
-                    0
-                ],
-                "type_variants": [
-                    "materials"
-                ],
-                "attribute_support": {}
-            }
-        ],
-        "minority_actions": [
-            {
-                "fact": {
-                    "subject": "e4",
-                    "action": "play",
-                    "object": "e8"
-                },
-                "support": 1,
-                "runs": [
-                    0
-                ]
-            },
-            {
-                "fact": {
-                    "subject": "e7",
-                    "action": "guide",
-                    "object": "e4"
-                },
-                "support": 1,
-                "runs": [
-                    0
-                ]
-            }
-        ],
-        "minority_relations": [
-            {
-                "fact": {
-                    "subject": "e4",
-                    "relation": "surround",
-                    "object": "e7"
-                },
-                "support": 1,
-                "runs": [
-                    2
-                ]
-            },
-            {
-                "fact": {
-                    "subject": "e4",
-                    "relation": "with",
-                    "object": "e8"
-                },
-                "support": 1,
-                "runs": [
-                    0
-                ]
-            },
-            {
-                "fact": {
-                    "subject": "e7",
-                    "relation": "surrounded_by",
-                    "object": "e4"
-                },
-                "support": 1,
-                "runs": [
-                    1
-                ]
-            },
-            {
-                "fact": {
-                    "subject": "e7",
-                    "relation": "with",
-                    "object": "e4"
-                },
-                "support": 1,
-                "runs": [
-                    0
-                ]
-            }
-        ],
+        "minority_entities": [],
+        "minority_actions": [],
+        "minority_relations": [],
         "scene": {
-            "location_support": {
-                "classroom": 3
-            },
+            "location_support": {},
             "minority_environment": [
                 {
-                    "value": "well_lit",
+                    "value": "bright_blue_sky",
                     "support": 1,
                     "runs": [
-                        2
+                        1
+                    ]
+                },
+                {
+                    "value": "lush_green_mountain_ridge",
+                    "support": 1,
+                    "runs": [
+                        1
+                    ]
+                },
+                {
+                    "value": "natural",
+                    "support": 1,
+                    "runs": [
+                        0
+                    ]
+                },
+                {
+                    "value": "outdoor",
+                    "support": 1,
+                    "runs": [
+                        0
+                    ]
+                },
+                {
+                    "value": "wispy_white_clouds",
+                    "support": 1,
+                    "runs": [
+                        1
                     ]
                 }
             ]

@@ -1,0 +1,13 @@
+[
+    {
+        "image_id": "test_015",
+        "image_file": "test_015.jpg",
+        "baseline_run_number": 1,
+        "extraction_run_number": 1,
+        "caption": "A man and a woman are seated on a train, smiling at the camera while eating a meal from a bento box on the table in front of them.",
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+        "temperature": 0.0,
+        "status": "success",
+        "attempts": 1
+    }
+]

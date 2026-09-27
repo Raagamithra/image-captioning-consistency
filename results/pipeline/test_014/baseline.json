@@ -1,0 +1,13 @@
+[
+    {
+        "image_id": "test_014",
+        "image_file": "test_014.jpg",
+        "baseline_run_number": 1,
+        "extraction_run_number": 1,
+        "caption": "A bronze statue of two children flying a colorful kite stands on a pedestal in front of a tall, glass-windowed building.",
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+        "temperature": 0.0,
+        "status": "success",
+        "attempts": 1
+    }
+]

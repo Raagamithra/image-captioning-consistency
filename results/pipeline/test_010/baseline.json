@@ -1,0 +1,13 @@
+[
+    {
+        "image_id": "test_010",
+        "image_file": "test_010.jpg",
+        "baseline_run_number": 1,
+        "extraction_run_number": 1,
+        "caption": "A white horse pulls a green and red trolley car labeled 'Disneyland' through a park.",
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+        "temperature": 0.0,
+        "status": "success",
+        "attempts": 1
+    }
+]
